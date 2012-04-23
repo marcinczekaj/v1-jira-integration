@@ -1,0 +1,1876 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+	<Test name="ChangeSetWriterTester">
+		<Response path="meta.v1/ChangeSet">
+			<AssetType href="/v1.six/meta.v1/ChangeSet" version="6.5.55555.21955" name="ChangeSet" token="ChangeSet" displayname="AssetType'ChangeSet" abstract="False">
+				<AttributeDefinition name="PrimaryWorkitems" token="ChangeSet.PrimaryWorkitems" displayname="AttributeDefinition'PrimaryWorkitems'ChangeSet" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/v1.six/meta.v1/PrimaryWorkitem/ChangeSets" tokenref="PrimaryWorkitem.ChangeSets" />
+					<RelatedAsset nameref="PrimaryWorkitem" href="/v1.six/meta.v1/PrimaryWorkitem" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Reference" token="ChangeSet.Reference" displayname="AttributeDefinition'Reference'ChangeSet" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/ChangeSet/Reference" tokenref="ChangeSet.Reference" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Links" token="ChangeSet.Links" displayname="AttributeDefinition'Links'ChangeSet" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/v1.six/meta.v1/Link/Asset" tokenref="Link.Asset" />
+					<RelatedAsset nameref="Link" href="/v1.six/meta.v1/Link" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="ChangeSet.Description" displayname="AttributeDefinition'Description'ChangeSet" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/ChangeSet/Description" tokenref="ChangeSet.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="ChangeSet.Name" displayname="AttributeDefinition'Name'ChangeSet" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/ChangeSet/Name" tokenref="ChangeSet.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/ChangeSet/Links.URL">
+			<AttributeDefinition href="/VersionOne.Web/meta.v1/ChangeSet/Links.URL" of="/VersionOne.Web/meta.v1/ChangeSet" version="8.1.55555.29127" name="Links.URL" token="ChangeSet.Links.URL" displayname="AttributeDefinition'Links.URL'ChangeSet" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="True">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/Link/URL" tokenref="Link.URL" />
+			</AttributeDefinition>
+		</Response>
+		<Response path="meta.v1/Link">
+			<AssetType href="/v1.six/meta.v1/Link" version="6.5.55555.21955" name="Link" token="Link" displayname="AssetType'Link" abstract="False">
+				<AttributeDefinition name="Asset" token="Link.Asset" displayname="AttributeDefinition'Asset'Link" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/v1.six/meta.v1/ChangeSet/Links" tokenref="ChangeSet.Links" />
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<DisplayByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<RelatedAsset nameref="ChangeSet" href="/v1.six/meta.v1/ChangeSet" />
+				</AttributeDefinition>
+				<AttributeDefinition name="OnMenu" token="Link.OnMenu" displayname="AttributeDefinition'OnMenu'Link" attributetype="Boolean" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/OnMenu" tokenref="Link.OnMenu" />
+				</AttributeDefinition>
+				<AttributeDefinition name="URL" token="Link.URL" displayname="AttributeDefinition'URL'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/URL" tokenref="Link.URL" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Link.Name" displayname="AttributeDefinition'Name'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Name" tokenref="Link.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/PrimaryWorkitem">
+			<AssetType href="/v1.six/meta.v1/PrimaryWorkitem" version="6.5.55555.21955" name="PrimaryWorkitem" token="PrimaryWorkitem" displayname="AssetType'PrimaryWorkitem" abstract="True">
+				<AttributeDefinition name="ChangeSets" token="PrimaryWorkitem.ChangeSets" displayname="AttributeDefinition'ChangeSets'PrimaryWorkitem" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/v1.six/meta.v1/ChangeSet/PrimaryWorkitems" tokenref="ChangeSet.PrimaryWorkitems" />
+					<RelatedAsset nameref="ChangeSet" href="/v1.six/meta.v1/ChangeSet" />
+				</AttributeDefinition>
+				<AttributeDefinition href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Links" of="/VersionOne.Web/meta.v1/PrimaryWorkitem" version="8.1.55555.29127" name="Links" token="PrimaryWorkitem.Links" displayname="AttributeDefinition'Links'PrimaryWorkitem" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Links" tokenref="BaseAsset.Links" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Link/Asset" tokenref="Link.Asset" />
+					<RelatedAsset nameref="Link" href="/VersionOne.Web/meta.v1/Link" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Story">
+			<AssetType href="/v1.six/meta.v1/Story" version="6.5.55555.21955" name="Story" token="Story" displayname="AssetType'Story" abstract="False">
+				<Base nameref="PrimaryWorkitem" href="v1.six/meta.v1/PrimaryWorkitem" />
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Defect">
+			<AssetType href="/v1.six/meta.v1/Defect" version="6.5.55555.21955" name="Defect" token="Defect" displayname="AssetType'Defect" abstract="False">
+				<Base nameref="PrimaryWorkitem" href="v1.six/meta.v1/PrimaryWorkitem" />
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/PrimaryWorkitem/ChildrenMeAndDown.Reference">
+			<AttributeDefinition href="/v1.six/meta.v1/PrimaryWorkitem/ChildrenMeAndDown.Reference" of="/v1.six/meta.v1/PrimaryWorkitem" version="6.5.55555.21955" name="ChildrenMeAndDown.Reference" token="PrimaryWorkitem.ChildrenMeAndDown.Reference" displayname="AttributeDefinition'ChildrenMeAndDown.Reference'PrimaryWorkitem" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="True" />
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=&amp;where=ChangeSet.Reference='5'&amp;page=1,0">
+			<Assets total="1" pageSize="1" pageStart="0">
+				<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1003" id="ChangeSet:1003" />
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=&amp;where=ChangeSet.Reference='7'&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0" />
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=&amp;where=ChangeSet.Reference='8'&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0" />
+		</Response>
+		<Response path="rest-1.v1/Data/PrimaryWorkitem?sel=&amp;where=PrimaryWorkitem.ChildrenMeAndDown.Reference='TK-1111'">
+			<Assets total="0" pageSize="2147483647" pageStart="0" />
+		</Response>
+		<Response path="rest-1.v1/Data/PrimaryWorkitem?sel=&amp;where=PrimaryWorkitem.ChildrenMeAndDown.Reference='S-1000'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/v1.six/rest-1.v1/Data/Story/1004" id="Story:1004" />
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/New/ChangeSet">
+			<Asset href="/v1.six/rest-1.v1/New/ChangeSet" />
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?Comment='Updated+by+VersionOne.Fitter'">
+			<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1005/106" id="ChangeSet:1005:106">
+				<Attribute name="Reference">8</Attribute>
+				<Relation name="PrimaryWorkitems">
+					<Asset href="/v1.six/rest-1.v1/Data/Story/1004" idref="Story:1004" />
+				</Relation>
+				<Attribute name="Name">'Author' on '1/1/2000 12:34:56 PM'</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet/1003?Comment='Updated+by+VersionOne.Fitter'">
+			<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1003/106" id="ChangeSet:1003:106">
+				<Attribute name="Reference">5</Attribute>
+				<Relation name="PrimaryWorkitems">
+					<Asset href="/v1.six/rest-1.v1/Data/Story/1004" idref="Story:1004" />
+				</Relation>
+				<Attribute name="Name">'Author' on '1/1/2000 12:34:56 PM'</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet/1052?Comment='Updated+by+VersionOne.Fitter'">
+			<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1003/106" id="ChangeSet:1003:106">
+				<Attribute name="Reference">5</Attribute>
+				<Relation name="PrimaryWorkitems">
+					<Asset href="/v1.six/rest-1.v1/Data/Story/1004" idref="Story:1004" />
+				</Relation>
+				<Attribute name="Name">'Author' on '1/1/2000 12:34:56 PM'</Attribute>
+				<Attribute name="Links.URL">
+					<Value>http://server/12</Value>
+				</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=ChangeSet.Reference,ChangeSet.Links.URL&amp;where=ChangeSet.Reference='5'&amp;page=1,0">
+			<Assets total="1" pageSize="1" pageStart="0">
+				<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1003/106" id="ChangeSet:1003:105">
+					<Attribute name="Reference">5</Attribute>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=ChangeSet.Reference,ChangeSet.Links.URL&amp;where=ChangeSet.Reference='6'&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0"/>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=ChangeSet.Reference,ChangeSet.Links.URL&amp;where=ChangeSet.Reference='7'&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0"/>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=ChangeSet.Reference,ChangeSet.Links.URL&amp;where=ChangeSet.Reference='8'&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0"/>
+		</Response>
+		<Response path="rest-1.v1/Data/ChangeSet?sel=ChangeSet.Reference,ChangeSet.Links.URL&amp;where=ChangeSet.Reference='12'&amp;page=1,0">
+			<Assets total="1" pageSize="1" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/ChangeSet/1052" id="ChangeSet:1052">
+					<Attribute name="Reference">12</Attribute>
+					<Attribute name="Links.URL">
+						<Value>http://server/12</Value>
+					</Attribute>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/New/Link?ctx=ChangeSet:1005">
+			<Asset href="/v1.six/rest-1.v1/New/Link">
+				<Relation name="Asset" act="set">
+					<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1005" idref="ChangeSet:1005" />
+				</Relation>
+				<Attribute name="OnMenu" act="set">false</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/Link?Comment='Updated+by+VersionOne.Fitter'">
+			<Asset href="/v1.six/rest-1.v1/Data/Link/1006/107" id="Link:1006:107">
+				<Attribute name="Name">ChangeSet: 8</Attribute>
+				<Attribute name="URL">http://server/8</Attribute>
+				<Relation name="Asset">
+					<Asset href="/v1.six/rest-1.v1/Data/ChangeSet/1005" idref="ChangeSet:1005" />
+				</Relation>
+				<Attribute name="OnMenu">true</Attribute>
+			</Asset>
+		</Response>
+		<Response path="loc.v1/?Plural'Story">Stories</Response>
+		<Response path="loc.v1/?Plural'Defect">Defects</Response>
+	</Test>
+	<Test name="TestWriterServiceTester">
+		<Response path="meta.v1/TestSuite">
+			<AssetType href="/VersionOne.Web/meta.v1/TestSuite" version="6.5.55555.30468" name="TestSuite" token="TestSuite" displayname="AssetType'TestSuite" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Reference" token="TestSuite.Reference" displayname="AttributeDefinition'Reference'TestSuite" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestSuite/Reference" tokenref="TestSuite.Reference" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/TestRun">
+			<AssetType href="/VersionOne.Web/meta.v1/TestRun" version="6.5.55555.30468" name="TestRun" token="TestRun" displayname="AssetType'TestRun" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<DefaultOrderBy href="/VersionOne.Web/meta.v1/TestRun/Name" tokenref="TestRun.Name" />
+				<DefaultDisplayBy href="/VersionOne.Web/meta.v1/TestRun/Name" tokenref="TestRun.Name" />
+				<AttributeDefinition name="ChangeDate" token="TestRun.ChangeDate" displayname="AttributeDefinition'ChangeDate'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/ChangeDate" tokenref="BaseAsset.ChangeDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangeDate" tokenref="TestRun.ChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDate" token="TestRun.RetireDate" displayname="AttributeDefinition'RetireDate'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/RetireDate" tokenref="BaseAsset.RetireDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetireDate" tokenref="TestRun.RetireDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDate" token="TestRun.CreateDate" displayname="AttributeDefinition'CreateDate'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/CreateDate" tokenref="BaseAsset.CreateDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreateDate" tokenref="TestRun.CreateDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDateUTC" token="TestRun.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/ChangeDateUTC" tokenref="BaseAsset.ChangeDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangeDateUTC" tokenref="TestRun.ChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDateUTC" token="TestRun.RetireDateUTC" displayname="AttributeDefinition'RetireDateUTC'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/RetireDateUTC" tokenref="BaseAsset.RetireDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetireDateUTC" tokenref="TestRun.RetireDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDateUTC" token="TestRun.CreateDateUTC" displayname="AttributeDefinition'CreateDateUTC'TestRun" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/CreateDateUTC" tokenref="BaseAsset.CreateDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreateDateUTC" tokenref="TestRun.CreateDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeReason" token="TestRun.ChangeReason" displayname="AttributeDefinition'ChangeReason'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/ChangeReason" tokenref="BaseAsset.ChangeReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangeReason" tokenref="TestRun.ChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireReason" token="TestRun.RetireReason" displayname="AttributeDefinition'RetireReason'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/RetireReason" tokenref="BaseAsset.RetireReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetireReason" tokenref="TestRun.RetireReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateReason" token="TestRun.CreateReason" displayname="AttributeDefinition'CreateReason'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/CreateReason" tokenref="BaseAsset.CreateReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreateReason" tokenref="TestRun.CreateReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeComment" token="TestRun.ChangeComment" displayname="AttributeDefinition'ChangeComment'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/ChangeComment" tokenref="BaseAsset.ChangeComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangeComment" tokenref="TestRun.ChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireComment" token="TestRun.RetireComment" displayname="AttributeDefinition'RetireComment'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/RetireComment" tokenref="BaseAsset.RetireComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetireComment" tokenref="TestRun.RetireComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateComment" token="TestRun.CreateComment" displayname="AttributeDefinition'CreateComment'TestRun" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/CreateComment" tokenref="BaseAsset.CreateComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreateComment" tokenref="TestRun.CreateComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangedBy" token="TestRun.ChangedBy" displayname="AttributeDefinition'ChangedBy'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/ChangedBy" tokenref="BaseAsset.ChangedBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangedBy.Name" tokenref="TestRun.ChangedBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/ChangedBy.Name" tokenref="TestRun.ChangedBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetiredBy" token="TestRun.RetiredBy" displayname="AttributeDefinition'RetiredBy'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/RetiredBy" tokenref="BaseAsset.RetiredBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetiredBy.Name" tokenref="TestRun.RetiredBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/RetiredBy.Name" tokenref="TestRun.RetiredBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreatedBy" token="TestRun.CreatedBy" displayname="AttributeDefinition'CreatedBy'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/CreatedBy" tokenref="BaseAsset.CreatedBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreatedBy.Name" tokenref="TestRun.CreatedBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/CreatedBy.Name" tokenref="TestRun.CreatedBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Prior" token="TestRun.Prior" displayname="AttributeDefinition'Prior'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Prior" tokenref="BaseAsset.Prior" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Prior.Name" tokenref="TestRun.Prior.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/Prior.Name" tokenref="TestRun.Prior.Name" />
+					<RelatedAsset nameref="TestRun" href="/VersionOne.Web/meta.v1/TestRun" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ID" token="TestRun.ID" displayname="AttributeDefinition'ID'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/TestRun/ID" tokenref="TestRun.ID" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/ID" tokenref="TestRun.ID" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/Name" tokenref="TestRun.Name" />
+					<RelatedAsset nameref="TestRun" href="/VersionOne.Web/meta.v1/TestRun" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="TestRun.AssetType" displayname="AttributeDefinition'AssetType'TestRun" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/AssetType" tokenref="TestRun.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="TestRun.Key" displayname="AttributeDefinition'Key'TestRun" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Key" tokenref="TestRun.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="TestRun.Moment" displayname="AttributeDefinition'Moment'TestRun" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Moment" tokenref="TestRun.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="NotRun" token="TestRun.NotRun" displayname="AttributeDefinition'NotRun'TestRun" attributetype="Numeric" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/NotRun" tokenref="TestRun.NotRun" />
+				</AttributeDefinition>
+				<AttributeDefinition name="TestSuite" token="TestRun.TestSuite" displayname="AttributeDefinition'TestSuite'TestRun" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/TestSuite/TestRuns" tokenref="TestSuite.TestRuns" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/TestSuite.Name" tokenref="TestRun.TestSuite.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestRun/TestSuite.Name" tokenref="TestRun.TestSuite.Name" />
+					<RelatedAsset nameref="TestSuite" href="/VersionOne.Web/meta.v1/TestSuite" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="TestRun.Name" displayname="AttributeDefinition'Name'TestRun" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Name" tokenref="TestRun.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="TestRun.AssetState" displayname="AttributeDefinition'AssetState'TestRun" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/AssetState" tokenref="TestRun.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="TestRun.Description" displayname="AttributeDefinition'Description'TestRun" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Description" tokenref="BaseAsset.Description" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Description" tokenref="TestRun.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Notes" token="TestRun.Notes" displayname="AttributeDefinition'Notes'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Notes" tokenref="BaseAsset.Notes" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Note/Asset" tokenref="Note.Asset" />
+					<RelatedAsset nameref="Note" href="/VersionOne.Web/meta.v1/Note" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Links" token="TestRun.Links" displayname="AttributeDefinition'Links'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Links" tokenref="BaseAsset.Links" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Link/Asset" tokenref="Link.Asset" />
+					<RelatedAsset nameref="Link" href="/VersionOne.Web/meta.v1/Link" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Attachments" token="TestRun.Attachments" displayname="AttributeDefinition'Attachments'TestRun" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Attachments" tokenref="BaseAsset.Attachments" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Attachment/Asset" tokenref="Attachment.Asset" />
+					<RelatedAsset nameref="Attachment" href="/VersionOne.Web/meta.v1/Attachment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Failed" token="TestRun.Failed" displayname="AttributeDefinition'Failed'TestRun" attributetype="Numeric" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Failed" tokenref="TestRun.Failed" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Passed" token="TestRun.Passed" displayname="AttributeDefinition'Passed'TestRun" attributetype="Numeric" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Passed" tokenref="TestRun.Passed" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Elapsed" token="TestRun.Elapsed" displayname="AttributeDefinition'Elapsed'TestRun" attributetype="Numeric" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Elapsed" tokenref="TestRun.Elapsed" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Date" token="TestRun.Date" displayname="AttributeDefinition'Date'TestRun" attributetype="Date" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/Date" tokenref="TestRun.Date" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CanUpdate" token="TestRun.CanUpdate" displayname="AttributeDefinition'CanUpdate'TestRun" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/CanUpdate" tokenref="TestRun.CanUpdate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsReadOnly" token="TestRun.IsReadOnly" displayname="AttributeDefinition'IsReadOnly'TestRun" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/IsReadOnly" tokenref="BaseAsset.IsReadOnly" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/IsReadOnly" tokenref="TestRun.IsReadOnly" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeletable" token="TestRun.IsDeletable" displayname="AttributeDefinition'IsDeletable'TestRun" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/IsDeletable" tokenref="BaseAsset.IsDeletable" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/IsDeletable" tokenref="TestRun.IsDeletable" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeleted" token="TestRun.IsDeleted" displayname="AttributeDefinition'IsDeleted'TestRun" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/IsDeleted" tokenref="BaseAsset.IsDeleted" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/IsDeleted" tokenref="TestRun.IsDeleted" />
+				</AttributeDefinition>
+				<AttributeDefinition name="FakeAssetState" token="TestRun.FakeAssetState" displayname="AttributeDefinition'FakeAssetState'TestRun" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/FakeAssetState" tokenref="BaseAsset.FakeAssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestRun/FakeAssetState" tokenref="TestRun.FakeAssetState" />
+				</AttributeDefinition>
+				<Operation name="Delete">
+					<Validator href="/VersionOne.Web/meta.v1/BaseAsset/IsDeletable" tokenref="BaseAsset.IsDeletable" />
+				</Operation>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Test">
+			<AssetType href="/VersionOne.Web/meta.v1/Test" version="6.5.55555.30468" name="Test" token="Test" displayname="AssetType'Test" abstract="False">
+				<Base nameref="Workitem" href="/VersionOne.Web/meta.v1/Workitem" />
+				<AttributeDefinition name="Status" token="Test.Status" displayname="AttributeDefinition'Status'Test" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/TestStatus/Tests" tokenref="TestStatus.Tests" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Status.Order" tokenref="Test.Status.Order" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Test/Status.Name" tokenref="Test.Status.Name" />
+					<RelatedAsset nameref="TestStatus" href="/VersionOne.Web/meta.v1/TestStatus" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Reference" token="Test.Reference" displayname="AttributeDefinition'Reference'Test" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Reference" tokenref="Workitem.Reference" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Reference" tokenref="Test.Reference" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Test.Name" displayname="AttributeDefinition'Name'Test" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Name" tokenref="Test.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="Test.AssetState" displayname="AttributeDefinition'AssetState'Test" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/AssetState" tokenref="Test.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Parent" token="Test.Parent" displayname="AttributeDefinition'Parent'Test" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Parent" tokenref="Workitem.Parent" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Children" tokenref="PrimaryWorkitem.Children" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Parent.Order" tokenref="Test.Parent.Order" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Test/Parent.Name" tokenref="Test.Parent.Name" />
+					<RelatedAsset nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Parent.Number" token="Test.Parent.Number" displayname="AttributeDefinition'Parent.Number'Test" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Number" tokenref="PrimaryWorkitem.Number" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Parent.Number" tokenref="Test.Parent.Number" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Parent.Name" token="Test.Parent.Name" displayname="AttributeDefinition'Parent.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Name" tokenref="PrimaryWorkitem.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Parent.Name" tokenref="Test.Parent.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope" token="Test.Scope" displayname="AttributeDefinition'Scope'Test" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Scope" tokenref="Workitem.Scope" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Scope/Workitems" tokenref="Scope.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Scope.Name" tokenref="Test.Scope.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Test/Scope.Name" tokenref="Test.Scope.Name" />
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Scope" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope.Name" token="Test.Scope.Name" displayname="AttributeDefinition'Scope.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+					<RelatedAttribute href="/8715/meta.v1/Scope/Name" tokenref="Scope.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Test/Scope.Name" tokenref="Test.Scope.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope.Schedule" token="Test.Scope.Schedule" displayname="AttributeDefinition'Scope'Schedule'Test" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/V1Test/meta.v1/Schedule/ScheduledScopes" tokenref="Schedule.ScheduledScopes" />
+					<OrderByAttribute href="/V1Test/meta.v1/Scope/Schedule.Name" tokenref="Scope.Schedule.Name" />
+					<DisplayByAttribute href="/V1Test/meta.v1/Scope/Schedule.Name" tokenref="Scope.Schedule.Name" />
+					<RelatedAsset nameref="Schedule" href="/V1Test/meta.v1/Schedule" />
+				</AttributeDefinition>				
+				<AttributeDefinition name="Parent.AffectedByDefects[AssetState='Active']" token="Test.Parent.AffectedByDefects[AssetState='Active']" displayname="AttributeDefinition'Parent.AffectedByDefects[AssetState='Active']'Test" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/PrimaryWorkitem/AffectedByDefects[AssetState='Active']" tokenref="PrimaryWorkitem.AffectedByDefects[AssetState='Active']" />
+					<RelatedAsset nameref="Defect" href="/VersionOne.Web/meta.v1/Defect" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Status.Name" token="Test.Status.Name" displayname="AttributeDefinition'Status.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/TestStatus/Name" tokenref="TestStatus.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Status.Name" tokenref="Test.Status.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Timebox" token="Test.Timebox" displayname="AttributeDefinition'Timebox'Test" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Timebox" tokenref="Workitem.Timebox" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Timebox/Workitems" tokenref="Timebox.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Timebox.EndDate" tokenref="Test.Timebox.EndDate" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Test/Timebox.Name" tokenref="Test.Timebox.Name" />
+					<RelatedAsset nameref="Timebox" href="/VersionOne.Web/meta.v1/Timebox" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Timebox.AssetState" token="Test.Timebox.AssetState" displayname="AttributeDefinition'Timebox.AssetState'Test" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/Timebox/AssetState" tokenref="Timebox.AssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Timebox.AssetState" tokenref="Test.Timebox.AssetState" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Defect">
+			<AssetType href="/VersionOne.Web/meta.v1/Defect" version="6.5.55555.30468" name="Defect" token="Defect" displayname="AssetType'Defect" abstract="False">
+				<Base nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				<AttributeDefinition name="Name" token="Defect.Name" displayname="AttributeDefinition'Name'Defect" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/r/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/VersionOne.Web/r/VersionOne.Web/meta.v1/Defect/Name" tokenref="Defect.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="Defect.Description" displayname="AttributeDefinition'Description'Defect" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/r/VersionOne.Web/meta.v1/BaseAsset/Description" tokenref="BaseAsset.Description" />
+					<OrderByAttribute href="/VersionOne.Web/r/VersionOne.Web/meta.v1/Defect/Description" tokenref="Defect.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AffectedPrimaryWorkitems" token="Defect.AffectedPrimaryWorkitems" displayname="AttributeDefinition'AffectedPrimaryWorkitems'Defect" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/PrimaryWorkitem/AffectedByDefects" tokenref="PrimaryWorkitem.AffectedByDefects" />
+					<RelatedAsset nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope" token="Defect.Scope" displayname="AttributeDefinition'Scope'Defect" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Scope" tokenref="Workitem.Scope" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Scope/Workitems" tokenref="Scope.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Scope.Name" tokenref="Defect.Scope.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Defect/Scope.Name" tokenref="Defect.Scope.Name" />
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Scope" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Timebox" token="Defect.Timebox" displayname="AttributeDefinition'Timebox'Defect" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Timebox" tokenref="Workitem.Timebox" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Timebox/Workitems" tokenref="Timebox.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Timebox.EndDate" tokenref="Defect.Timebox.EndDate" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Defect/Timebox.Name" tokenref="Defect.Timebox.Name" />
+					<RelatedAsset nameref="Timebox" href="/VersionOne.Web/meta.v1/Timebox" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Number" token="Defect.Number" displayname="AttributeDefinition'Number'Defect" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Number" tokenref="Workitem.Number" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Number" tokenref="Defect.Number" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/TestStatus">
+			<AssetType href="/VersionOne.Web/meta.v1/TestStatus" version="6.5.55555.30468" name="TestStatus" token="TestStatus" displayname="AssetType'TestStatus" abstract="False">
+				<Base nameref="List" href="/VersionOne.Web/meta.v1/List" />
+				<DefaultOrderBy href="/VersionOne.Web/meta.v1/TestStatus/Order" tokenref="TestStatus.Order" />
+				<DefaultDisplayBy href="/VersionOne.Web/meta.v1/TestStatus/Name" tokenref="TestStatus.Name" />
+				<AttributeDefinition name="ChangeDate" token="TestStatus.ChangeDate" displayname="AttributeDefinition'ChangeDate'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/ChangeDate" tokenref="List.ChangeDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangeDate" tokenref="TestStatus.ChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDate" token="TestStatus.RetireDate" displayname="AttributeDefinition'RetireDate'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/RetireDate" tokenref="List.RetireDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetireDate" tokenref="TestStatus.RetireDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDate" token="TestStatus.CreateDate" displayname="AttributeDefinition'CreateDate'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CreateDate" tokenref="List.CreateDate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreateDate" tokenref="TestStatus.CreateDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDateUTC" token="TestStatus.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/ChangeDateUTC" tokenref="List.ChangeDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangeDateUTC" tokenref="TestStatus.ChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDateUTC" token="TestStatus.RetireDateUTC" displayname="AttributeDefinition'RetireDateUTC'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/RetireDateUTC" tokenref="List.RetireDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetireDateUTC" tokenref="TestStatus.RetireDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDateUTC" token="TestStatus.CreateDateUTC" displayname="AttributeDefinition'CreateDateUTC'TestStatus" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CreateDateUTC" tokenref="List.CreateDateUTC" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreateDateUTC" tokenref="TestStatus.CreateDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeReason" token="TestStatus.ChangeReason" displayname="AttributeDefinition'ChangeReason'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/ChangeReason" tokenref="List.ChangeReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangeReason" tokenref="TestStatus.ChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireReason" token="TestStatus.RetireReason" displayname="AttributeDefinition'RetireReason'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/RetireReason" tokenref="List.RetireReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetireReason" tokenref="TestStatus.RetireReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateReason" token="TestStatus.CreateReason" displayname="AttributeDefinition'CreateReason'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CreateReason" tokenref="List.CreateReason" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreateReason" tokenref="TestStatus.CreateReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeComment" token="TestStatus.ChangeComment" displayname="AttributeDefinition'ChangeComment'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/ChangeComment" tokenref="List.ChangeComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangeComment" tokenref="TestStatus.ChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireComment" token="TestStatus.RetireComment" displayname="AttributeDefinition'RetireComment'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/RetireComment" tokenref="List.RetireComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetireComment" tokenref="TestStatus.RetireComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateComment" token="TestStatus.CreateComment" displayname="AttributeDefinition'CreateComment'TestStatus" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CreateComment" tokenref="List.CreateComment" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreateComment" tokenref="TestStatus.CreateComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangedBy" token="TestStatus.ChangedBy" displayname="AttributeDefinition'ChangedBy'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/ChangedBy" tokenref="List.ChangedBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangedBy.Name" tokenref="TestStatus.ChangedBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ChangedBy.Name" tokenref="TestStatus.ChangedBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetiredBy" token="TestStatus.RetiredBy" displayname="AttributeDefinition'RetiredBy'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/RetiredBy" tokenref="List.RetiredBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetiredBy.Name" tokenref="TestStatus.RetiredBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestStatus/RetiredBy.Name" tokenref="TestStatus.RetiredBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreatedBy" token="TestStatus.CreatedBy" displayname="AttributeDefinition'CreatedBy'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CreatedBy" tokenref="List.CreatedBy" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreatedBy.Name" tokenref="TestStatus.CreatedBy.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CreatedBy.Name" tokenref="TestStatus.CreatedBy.Name" />
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Prior" token="TestStatus.Prior" displayname="AttributeDefinition'Prior'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/Prior" tokenref="List.Prior" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Prior.Order" tokenref="TestStatus.Prior.Order" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Prior.Name" tokenref="TestStatus.Prior.Name" />
+					<RelatedAsset nameref="TestStatus" href="/VersionOne.Web/meta.v1/TestStatus" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ID" token="TestStatus.ID" displayname="AttributeDefinition'ID'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/TestStatus/ID" tokenref="TestStatus.ID" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/ID" tokenref="TestStatus.ID" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Name" tokenref="TestStatus.Name" />
+					<RelatedAsset nameref="TestStatus" href="/VersionOne.Web/meta.v1/TestStatus" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="TestStatus.AssetType" displayname="AttributeDefinition'AssetType'TestStatus" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/AssetType" tokenref="TestStatus.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="TestStatus.Key" displayname="AttributeDefinition'Key'TestStatus" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Key" tokenref="TestStatus.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="TestStatus.Moment" displayname="AttributeDefinition'Moment'TestStatus" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Moment" tokenref="TestStatus.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Tests" token="TestStatus.Tests" displayname="AttributeDefinition'Tests'TestStatus" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Test/Status" tokenref="Test.Status" />
+					<RelatedAsset nameref="Test" href="/VersionOne.Web/meta.v1/Test" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Order" token="TestStatus.Order" displayname="AttributeDefinition'Order'TestStatus" attributetype="Rank" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/Order" tokenref="List.Order" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Order" tokenref="TestStatus.Order" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="TestStatus.Description" displayname="AttributeDefinition'Description'TestStatus" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/Description" tokenref="List.Description" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Description" tokenref="TestStatus.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="TestStatus.Name" displayname="AttributeDefinition'Name'TestStatus" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/Name" tokenref="List.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Name" tokenref="TestStatus.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="TestStatus.AssetState" displayname="AttributeDefinition'AssetState'TestStatus" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/AssetState" tokenref="List.AssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/AssetState" tokenref="TestStatus.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CanUpdate" token="TestStatus.CanUpdate" displayname="AttributeDefinition'CanUpdate'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CanUpdate" tokenref="TestStatus.CanUpdate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsReadOnly" token="TestStatus.IsReadOnly" displayname="AttributeDefinition'IsReadOnly'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/IsReadOnly" tokenref="List.IsReadOnly" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/IsReadOnly" tokenref="TestStatus.IsReadOnly" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeletable" token="TestStatus.IsDeletable" displayname="AttributeDefinition'IsDeletable'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/IsDeletable" tokenref="TestStatus.IsDeletable" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Inactive" token="TestStatus.Inactive" displayname="AttributeDefinition'Inactive'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/Inactive" tokenref="List.Inactive" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/Inactive" tokenref="TestStatus.Inactive" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckActivate" token="TestStatus.CheckActivate" displayname="AttributeDefinition'CheckActivate'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CheckActivate" tokenref="TestStatus.CheckActivate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckInactivate" token="TestStatus.CheckInactivate" displayname="AttributeDefinition'CheckInactivate'TestStatus" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/TestStatus/CheckInactivate" tokenref="TestStatus.CheckInactivate" />
+				</AttributeDefinition>
+				<Operation name="Delete">
+					<Validator href="/VersionOne.Web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+				</Operation>
+				<Operation name="Activate">
+					<Validator href="/VersionOne.Web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+				</Operation>
+				<Operation name="Inactivate">
+					<Validator href="/VersionOne.Web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+				</Operation>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Test/Status.Name">
+			<AttributeDefinition name="Status.Name" token="Test.Status.Name" displayname="AttributeDefinition'Status.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/TestStatus/Name" tokenref="TestStatus.Name" />
+				<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Status.Name" tokenref="Test.Status.Name" />
+			</AttributeDefinition>
+		</Response>
+		 <Response path="meta.v1/Test/Timebox.Name">
+			<AttributeDefinition href="/VersionOne.Web/meta.v1/Test/Timebox.Name" of="/VersionOne.Web/meta.v1/Test" version="6.5.55555.30468" name="Timebox.Name" token="Test.Timebox.Name" displayname="AttributeDefinition'Timebox.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/Timebox/Name" tokenref="Timebox.Name" />
+				<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Timebox.Name" tokenref="Test.Timebox.Name" />
+			</AttributeDefinition>
+		</Response> 
+		<Response path="meta.v1/Timebox">
+			<AssetType href="/VersionOne.Web/meta.v1/Timebox" version="6.5.55555.30468" name="Timebox" token="Timebox" displayname="AssetType'Timebox" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<!--<AttributeDefinition name="Name" token="Timebox.Name" displayname="AttributeDefinition'Timebox.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+					<RelatedAttribute href="/VersionOne.Web/meta.v1/Timebox/Name" tokenref="Timebox.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Timebox.Name" tokenref="Test.Timebox.Name" />
+				</AttributeDefinition>-->
+				<AttributeDefinition name="Schedule" token="Timebox.Schedule" displayname="AttributeDefinition'Schedule'Timebox" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Schedule/Timeboxes" tokenref="Schedule.Timeboxes" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Timebox/Schedule.Name" tokenref="Timebox.Schedule.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Timebox/Schedule.Name" tokenref="Timebox.Schedule.Name" />
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Schedule" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="Timebox.AssetState" displayname="AttributeDefinition'AssetState'Timebox" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Timebox/AssetState" tokenref="Timebox.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="EndDate" token="Timebox.EndDate" displayname="AttributeDefinition'EndDate'Timebox" attributetype="Date" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Timebox/EndDate" tokenref="Timebox.EndDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="Timebox.Key" displayname="AttributeDefinition'Key'Timebox" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Timebox/Key" tokenref="Timebox.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="Timebox.Moment" displayname="AttributeDefinition'Moment'Timebox" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/8715/meta.v1/Timebox/Moment" tokenref="Timebox.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ID" token="Timebox.ID" displayname="AttributeDefinition'ID'Timebox" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/8715/meta.v1/Timebox/ID" tokenref="Timebox.ID" />
+					<OrderByAttribute href="/8715/meta.v1/Timebox/ID" tokenref="Timebox.ID" />
+					<DisplayByAttribute href="/8715/meta.v1/Timebox/Name" tokenref="Timebox.Name" />
+					<RelatedAsset nameref="Timebox" href="/8715/meta.v1/Timebox" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Story">
+			<AssetType href="/VersionOne.Web/meta.v1/Story" version="6.5.55555.30468" name="Story" token="Story" displayname="AssetType'Story" abstract="False">
+				<Base nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				<AttributeDefinition name="Number" token="Story.Number" displayname="AttributeDefinition'Number'Story" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Number" tokenref="Workitem.Number" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Story/Number" tokenref="Story.Number" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/PrimaryWorkitem">
+			<AssetType href="/VersionOne.Web/meta.v1/PrimaryWorkitem" version="6.5.55555.30468" name="PrimaryWorkitem" token="PrimaryWorkitem" displayname="AssetType'PrimaryWorkitem" abstract="True">
+				<Base nameref="Workitem" href="/VersionOne.Web/meta.v1/Workitem" />
+				<AttributeDefinition href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Name" of="/VersionOne.Web/meta.v1/PrimaryWorkitem" version="6.5.55555.30468" name="Name" token="PrimaryWorkitem.Name" displayname="AttributeDefinition'Name'PrimaryWorkitem" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/PrimaryWorkitem/Name" tokenref="PrimaryWorkitem.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/BaseAsset">
+			<AssetType href="/VersionOne.Web/meta.v1/BaseAsset" version="6.5.55555.30468" name="BaseAsset" token="BaseAsset" displayname="AssetType'BaseAsset" abstract="True">
+				<AttributeDefinition version="6.5.55555.30468" name="Name" token="BaseAsset.Name" displayname="AttributeDefinition'Name'BaseAsset" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Scope">
+			<AssetType href="/VersionOne.Web/meta.v1/Scope" version="6.5.55555.30468" name="Scope" token="Scope" displayname="AssetType'Scope" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Scope.Name" displayname="AttributeDefinition'Name'Scope" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Scope/Name" tokenref="Scope.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Schedule">
+			<AssetType href="/VersionOne.Web/meta.v1/Schedule" version="6.5.55555.30468" name="Schedule" token="Schedule" displayname="AssetType'Schedule" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Schedule.Name" displayname="AttributeDefinition'Name'Schedule" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Schedule/Name" tokenref="Schedule.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Test/Parent.AffectedByDefects[AssetState='Active'].Number">
+			<AttributeDefinition href="/VersionOne.Web/meta.v1/Test/Parent.AffectedByDefects[AssetState='Active'].Number" of="/VersionOne.Web/meta.v1/Test" version="6.5.55555.30468" name="Parent.AffectedByDefects[AssetState='Active'].Number" token="Test.Parent.AffectedByDefects[AssetState='Active'].Number" displayname="AttributeDefinition'Parent.AffectedByDefects[AssetState='Active'].Number'Test" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="True">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/Defect/Number" tokenref="Defect.Number" />
+			</AttributeDefinition>
+		</Response>
+		<Response path="meta.v1/Test/Parent.AffectedByDefects[AssetState='Active'].Name">
+			<AttributeDefinition href="/VersionOne.Web/meta.v1/Test/Parent.AffectedByDefects[AssetState='Active'].Name" of="/VersionOne.Web/meta.v1/Test" version="6.5.55555.30468" name="Parent.AffectedByDefects[AssetState='Active'].Name" token="Test.Parent.AffectedByDefects[AssetState='Active'].Name" displayname="AttributeDefinition'Parent.AffectedByDefects[AssetState='Active'].Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="True">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/Defect/Name" tokenref="Defect.Name" />
+			</AttributeDefinition>
+		</Response>
+		<Response path="meta.v1/Test/Scope.Schedule.Name">
+			<AttributeDefinition href="/VersionOne.Web/meta.v1/Test/Scope.Schedule.Name" of="/VersionOne.Web/meta.v1/Test" version="6.5.55555.30468" name="Scope.Schedule.Name" token="Test.Scope.Schedule.Name" displayname="AttributeDefinition'Scope.Schedule.Name'Test" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+				<RelatedAttribute href="/VersionOne.Web/meta.v1/Scope/Name" tokenref="Scope.Name" />
+				<OrderByAttribute href="/VersionOne.Web/meta.v1/Test/Scope.Schedule.Name" tokenref="Test.Scope.Schedule.Name" />
+			</AttributeDefinition>
+		</Response>
+
+		<Response path="rest-1.v1/Data/TestStatus?sel=&amp;where=TestStatus.Key='129'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/129" id="TestStatus:129">
+				<Attribute name="AssetState">64</Attribute>
+				<Attribute name="Description" />
+				<Attribute name="AssetType">TestStatus</Attribute>
+				<Attribute name="Name">Passed</Attribute>
+				<Attribute name="Order">18</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/TestStatus?sel=&amp;where=TestStatus.Key='155'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/155" id="TestStatus:155">
+				<Attribute name="AssetState">64</Attribute>
+				<Attribute name="Description" />
+				<Attribute name="AssetType">TestStatus</Attribute>
+				<Attribute name="Name">Failed</Attribute>
+				<Attribute name="Order">19</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/TestSuite?sel=&amp;where=TestSuite.Reference='SuiteRef'">
+			<Asset href="/V1Production/rest-1.v1/Data/TestSuite/9977" id="TestSuite:9977" />
+		</Response>
+		<Response path="rest-1.v1/Data/TestRun">
+			<Asset href="/V1Production/rest-1.v1/Data/TestRun/10022" id="TestRun:10022">
+				<Attribute name="Date">2007-01-22T21:37:19.000</Attribute>
+				<Attribute name="TestSuite.Name">Release 6.4</Attribute>
+				<Attribute name="Description">VersionOne Test Harness Results for Enterprise Build 8653. Test Harness Build . Tests Build 114.</Attribute>
+				<Attribute name="Failed">5</Attribute>
+				<Attribute name="NotRun">0</Attribute>
+				<Attribute name="Name">(8653) (90) (114)</Attribute>
+				<Attribute name="Elapsed">436032</Attribute>
+				<Attribute name="Passed">36</Attribute>
+				<Attribute name="AssetType">TestRun</Attribute>
+				<Attribute name="AssetState">64</Attribute>
+				<Relation name="TestSuite">
+					<Asset href="/V1Production/rest-1.v1/Data/TestSuite/9976" idref="TestSuite:9976" />
+				</Relation>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/TestSuite?sel=&amp;where=TestSuite.Reference='FooBar'">
+			<Assets total="0" pageSize="2147483647" pageStart="0" />
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='testRef'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">64</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Relation name="Status" />
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Status.Name" />
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" idref="Timebox:1009" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='passedTest'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">64</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Attribute name="Status.Name">Passed</Attribute>
+					<Relation name="Status">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/129" idref="TestStatus:129" />
+					</Relation>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" idref="Timebox:1009" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='failedTest'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">64</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Attribute name="Status.Name">Failed</Attribute>
+					<Relation name="Status">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/155" idref="TestStatus:155" />
+					</Relation>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" idref="Timebox:1009" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='fooBar'">
+			<Assets total="0" pageSize="2147483647" pageStart="0"/>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='closedTest'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">128</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Relation name="Status">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/155" idref="TestStatus:155" />
+					</Relation>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Status.Name">Failed</Attribute>
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1010" idref="Timebox:1010" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='closedTestHasDefect'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Defect/1048" idref="Defect:1048" />
+					</Relation>
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">128</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number">
+						<Value>D-01001</Value>
+					</Attribute>
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name">
+						<Value>Defect Popup</Value>
+					</Attribute>
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Relation name="Status">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/155" idref="TestStatus:155" />
+					</Relation>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Status.Name">Failed</Attribute>
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" idref="Timebox:1009" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='closedTestNoActiveTimebox'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Attribute name="AssetState">128</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/1" idref="Scope:1" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Relation name="Status">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/TestStatus/155" idref="TestStatus:155" />
+					</Relation>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Status.Name">Failed</Attribute>
+					<Relation name="Timebox">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" idref="Timebox:1009" />
+					</Relation>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='closedTestNoTimebox'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042">
+					<Relation name="Status" />
+					<Attribute name="Status.Name" />
+					<Attribute name="Name">Test Popup</Attribute>
+					<Attribute name="AssetState">128</Attribute>
+					<Relation name="Parent">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Relation name="Scope">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Relation name="Scope.Schedule">
+						<Asset href="/VersionOne.Web/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Relation name="Timebox"/>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='Test4'">
+			<Assets total="1" pageSize="2147483647" pageStart="0">
+				<Asset href="/8715/rest-1.v1/Data/Test/1077" id="Test:1077">
+					<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+					<Attribute name="Name">Test4</Attribute>
+					<Attribute name="Parent.Number">S-01004</Attribute>
+					<Attribute name="AssetState">128</Attribute>
+					<Attribute name="Status.Name" />
+					<Attribute name="Scope.Name">System</Attribute>
+					<Attribute name="Timebox.Name">Iteration 1</Attribute>
+					<Relation name="Parent">
+						<Asset href="/8715/rest-1.v1/Data/Story/1030" idref="Story:1030" />
+					</Relation>
+					<Relation name="Timebox">
+						<Asset href="/8715/rest-1.v1/Data/Timebox/1009" idref="Timebox:1010" />
+					</Relation>
+					<Attribute name="Parent.Name">Story Popup</Attribute>
+					<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+					<Relation name="Scope.Schedule">
+						<Asset href="/8715/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+					</Relation>
+					<Relation name="Scope">
+						<Asset href="/8715/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+					</Relation>
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+					<Relation name="Status" />
+					<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Test?sel=Test.Status,Test.Name,Test.AssetState,Test.Parent,Test.Scope,Test.Parent.Number,Test.Scope.Schedule,Test.Parent.AffectedByDefects[AssetState='Active'],Test.Timebox&amp;where=Test.Reference='Test5'">
+			<Asset href="/8715/rest-1.v1/Data/Test/1101" id="Test:1101">
+				<Attribute name="Scope.Schedule.Name">System Schedule</Attribute>
+				<Attribute name="Name">Test5</Attribute>
+				<Attribute name="Parent.Number">S-01011</Attribute>
+				<Attribute name="AssetState">128</Attribute>
+				<Attribute name="Status.Name" />
+				<Attribute name="Scope.Name">System</Attribute>
+				<Attribute name="Timebox.Name" />
+				<Relation name="Parent">
+					<Asset href="/8715/rest-1.v1/Data/Story/1037" idref="Story:1037" />
+				</Relation>
+				<Relation name="Timebox" />
+				<Attribute name="Parent.Name">Story Link</Attribute>
+				<Relation name="Parent.AffectedByDefects[AssetState='Active']" />
+				<Relation name="Scope.Schedule">
+					<Asset href="/8715/rest-1.v1/Data/Schedule/0" idref="Schedule:0" />
+				</Relation>
+				<Relation name="Scope">
+					<Asset href="/8715/rest-1.v1/Data/Scope/0" idref="Scope:0" />
+				</Relation>
+				<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Name" />
+				<Relation name="Status" />
+				<Attribute name="Parent.AffectedByDefects[AssetState='Active'].Number" />
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/Defect/1048">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Defect/1048" id="Defect:1048">
+				<Attribute name="Description">Used for issue testing.</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/Defect/1048/Description?">
+			<Attribute name="Description" href="/VersionOne.Web/rest-1.v1/Data/Defect/1048/Description" of="/VersionOne.Web/rest-1.v1/Data/Defect/1048">Used for issue testing.</Attribute>
+		</Response>
+		<Response path="rest-1.v1/Data/Timebox?sel=&amp;where=(Timebox.Schedule='Schedule%3a0';Timebox.AssetState='Active')&amp;sort=Timebox.EndDate&amp;page=1,0">
+			<Assets total="16" pageSize="1" pageStart="0">
+				<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" id="Timebox:1009" />
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/Timebox?sel=&amp;where=(Timebox.Schedule='Schedule%3a1';Timebox.AssetState='Active')&amp;sort=Timebox.EndDate&amp;page=1,0">
+			<Assets total="0" pageSize="1" pageStart="0"/>
+		</Response>
+
+		<Response path="rest-1.v1/New/TestRun?ctx=TestSuite:9977">
+			<Asset href="/V1Production/rest-1.v1/New/TestRun">
+				<Relation name="TestSuite" act="set">
+					<Asset href="/V1Production/rest-1.v1/Data/TestSuite/9977" idref="TestSuite:9977" />
+				</Relation>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/New/Defect">
+			<Asset href="/VersionOne.Web/rest-1.v1/New/Defect" />
+		</Response>
+
+		<Response path="rest-1.v1/Data/Test/1042?Comment='Updated+by+VersionOne.ServiceHost'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Test/1042" id="Test:1042" />
+		</Response>
+		<Response path="rest-1.v1/Data/Defect?Comment='Updated+by+VersionOne.ServiceHost'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Defect/1048" id="Defect:1048" />
+		</Response>
+		<Response path="rest-1.v1/Data/Defect/1048?Comment='Updated+by+VersionOne.ServiceHost'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Defect/1048" id="Defect:1048" />
+		</Response>
+		<Response path="rest-1.v1/Data/Timebox?sel=Timebox.AssetState&amp;where=Timebox.ID='Timebox%3a1010'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1009" id="Timebox:1010" >
+				<Attribute name="AssetState">64</Attribute>
+			</Asset>
+		</Response>
+		<Response path="rest-1.v1/Data/Timebox?sel=Timebox.AssetState&amp;where=Timebox.ID='Timebox%3a1009'">
+			<Asset href="/VersionOne.Web/rest-1.v1/Data/Timebox/1010" id="Timebox:1009" >
+				<Attribute name="AssetState">128</Attribute>
+			</Asset>
+		</Response>
+
+		<Response path="loc.v1/?AssetType'Story">Story</Response>
+		<Response path="loc.v1/?AssetType'Defect">Defect</Response>
+	</Test>
+	<Test name="EvalManagerServicesTester">
+		<Response path="meta.v1/Request">
+			<AssetType href="/EvalSystem/meta.v1/Request" version="7.2.9843.0" name="Request" token="Request" displayname="AssetType'Request" abstract="False">
+				<Base nameref="BaseAsset" href="/EvalSystem/meta.v1/BaseAsset" />
+				<AttributeDefinition name="CreateDate" token="Request.CreateDate" displayname="AttributeDefinition'CreateDate'Request" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/BaseAsset/CreateDate" tokenref="BaseAsset.CreateDate" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/CreateDate" tokenref="Request.CreateDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="Request.AssetType" displayname="AttributeDefinition'AssetType'Request" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/AssetType" tokenref="Request.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="Request.Key" displayname="AttributeDefinition'Key'Request" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Key" tokenref="Request.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="Request.Moment" displayname="AttributeDefinition'Moment'Request" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Moment" tokenref="Request.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Source" token="Request.Source" displayname="AttributeDefinition'Source'Request" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/StorySource/Requests" tokenref="StorySource.Requests" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Source.Order" tokenref="Request.Source.Order" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Request/Source.Name" tokenref="Request.Source.Name" />
+					<RelatedAsset nameref="StorySource" href="/EvalSystem/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreatedBy" token="Request.CreatedBy" displayname="AttributeDefinition'CreatedBy'Request" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Request/CreatedBy.Name" tokenref="Request.CreatedBy.Name" />
+					<RelatedAsset nameref="Member" href="/EvalSystem/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Number" token="Request.Number" displayname="AttributeDefinition'Number'Request" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Number" tokenref="Request.Number" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Reference" token="Request.Reference" displayname="AttributeDefinition'Reference'Request" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Reference" tokenref="Request.Reference" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Request.Name" displayname="AttributeDefinition'Name'Request" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/Name" tokenref="Request.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="Request.AssetState" displayname="AttributeDefinition'AssetState'Request" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/AssetState" tokenref="Request.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckInactivate" token="Request.CheckInactivate" displayname="AttributeDefinition'CheckInactivate'Request" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Request/CheckInactivate" tokenref="Request.CheckInactivate" />
+				</AttributeDefinition>
+				<AttributeDefinition href="/EvalSystem/meta.v1/Request/Stories" of="/EvalSystem/meta.v1/Request" version="7.2.9843.0" name="Stories" token="Request.Stories" displayname="AttributeDefinition'Stories'Request" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Story/Requests" tokenref="Story.Requests" />
+					<RelatedAsset nameref="Story" href="/EvalSystem/meta.v1/Story" />
+				</AttributeDefinition>
+				<Operation name="Inactivate">
+					<Validator href="/EvalSystem/meta.v1/Request/CheckInactivate" tokenref="Request.CheckInactivate" />
+				</Operation>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Request/Source.Name">
+			<AttributeDefinition href="/EvalSystem/meta.v1/Request/Source.Name" of="/EvalSystem/meta.v1/Request" version="7.2.9843.0" name="Source.Name" token="Request.Source.Name" displayname="AttributeDefinition'Source.Name'Request" attributetype="Text" isreadonly="True" isrequired="True" ismultivalue="False">
+				<RelatedAttribute href="/EvalSystem/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+				<OrderByAttribute href="/EvalSystem/meta.v1/Request/Source.Name" tokenref="Request.Source.Name" />
+			</AttributeDefinition>
+		</Response>
+		<Response path="meta.v1/Request/Custom_CommunityEdition">
+			<AttributeDefinition href="/evalsystem.stage/meta.v1/Request/Custom_CommunityEdition" of="/evalsystem.stage/meta.v1/Request" version="8.0.55555.27158" name="Custom_CommunityEdition" token="Request.Custom_CommunityEdition" displayname="AttributeDefinition'Custom_CommunityEdition'Request" attributetype="Boolean" isreadonly="False" isrequired="False" ismultivalue="False">
+				<OrderByAttribute href="/evalsystem.stage/meta.v1/Request/Custom_CommunityEdition" tokenref="Request.Custom_CommunityEdition" /> 
+			</AttributeDefinition>			
+		</Response>
+		<Response path="meta.v1/BaseAsset">
+			<AssetType href="/VersionOne.Web/meta.v1/BaseAsset" version="6.5.55555.30468" name="BaseAsset" token="BaseAsset" displayname="AssetType'BaseAsset" abstract="True">
+				<AttributeDefinition version="6.5.55555.30468" name="Name" token="BaseAsset.Name" displayname="AttributeDefinition'Name'BaseAsset" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Note">
+			<AssetType href="/EvalSystem/meta.v1/Note" version="7.2.9843.0" name="Note" token="Note" displayname="AssetType'Note" abstract="False">
+				<AttributeDefinition name="ID" token="Note.ID" displayname="AttributeDefinition'ID'Note" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Note/ID" tokenref="Note.ID" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/ID" tokenref="Note.ID" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Note/Name" tokenref="Note.Name" />
+					<RelatedAsset nameref="Note" href="/EvalSystem/meta.v1/Note" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="Note.AssetType" displayname="AttributeDefinition'AssetType'Note" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/AssetType" tokenref="Note.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="Note.Key" displayname="AttributeDefinition'Key'Note" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Key" tokenref="Note.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="Note.Moment" displayname="AttributeDefinition'Moment'Note" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Moment" tokenref="Note.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="PersonalTo" token="Note.PersonalTo" displayname="AttributeDefinition'PersonalTo'Note" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Member/PersonalNotes" tokenref="Member.PersonalNotes" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/PersonalTo.Name" tokenref="Note.PersonalTo.Name" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Note/PersonalTo.Name" tokenref="Note.PersonalTo.Name" />
+					<RelatedAsset nameref="Member" href="/EvalSystem/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Author" token="Note.Author" displayname="AttributeDefinition'Author'Note" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Member/AuthoredNotes" tokenref="Member.AuthoredNotes" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Author.Name" tokenref="Note.Author.Name" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Note/Author.Name" tokenref="Note.Author.Name" />
+					<RelatedAsset nameref="Member" href="/EvalSystem/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Asset" token="Note.Asset" displayname="AttributeDefinition'Asset'Note" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/BaseAsset/Notes" tokenref="BaseAsset.Notes" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Asset.Name" tokenref="Note.Asset.Name" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Note/Asset.Name" tokenref="Note.Asset.Name" />
+					<RelatedAsset nameref="BaseAsset" href="/EvalSystem/meta.v1/BaseAsset" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Personal" token="Note.Personal" displayname="AttributeDefinition'Personal'Note" attributetype="Boolean" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Personal" tokenref="Note.Personal" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Content" token="Note.Content" displayname="AttributeDefinition'Content'Note" attributetype="LongText" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Content" tokenref="Note.Content" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Note.Name" displayname="AttributeDefinition'Name'Note" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Note/Name" tokenref="Note.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Member">
+			<AssetType href="/VersionOne.Web/meta.v1/Member" version="6.5.55555.30468" name="Member" token="Member" displayname="AssetType'Member" abstract="True" />
+		</Response>
+		<Response path="meta.v1/Story">
+			<AssetType href="/EvalSystem/meta.v1/Story" version="7.2.9843.0" name="Story" token="Story" displayname="AssetType'Story" abstract="False">
+				<Base nameref="BaseAsset" href="/EvalSystem/meta.v1/BaseAsset" />
+				<AttributeDefinition name="ID" token="Story.ID" displayname="AttributeDefinition'ID'Story" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Story/ID" tokenref="Story.ID" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/ID" tokenref="Story.ID" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Story/Name" tokenref="Story.Name" />
+					<RelatedAsset nameref="Story" href="/EvalSystem/meta.v1/Story" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="Story.AssetType" displayname="AttributeDefinition'AssetType'Story" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/AssetType" tokenref="Story.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="Story.Key" displayname="AttributeDefinition'Key'Story" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/Key" tokenref="Story.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="Story.Moment" displayname="AttributeDefinition'Moment'Story" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/Moment" tokenref="Story.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Requests" token="Story.Requests" displayname="AttributeDefinition'Requests'Story" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/Request/Stories" tokenref="Request.Stories" />
+					<RelatedAsset nameref="Request" href="/EvalSystem/meta.v1/Request" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Owners" token="Story.Owners" displayname="AttributeDefinition'Owners'Story" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<RelatedAsset nameref="Member" href="/EvalSystem/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Source" token="Story.Source" displayname="AttributeDefinition'Source'Story" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/PrimaryWorkitem/Source" tokenref="PrimaryWorkitem.Source" />
+					<ReciprocalRelation href="/EvalSystem/meta.v1/StorySource/PrimaryWorkitems" tokenref="StorySource.PrimaryWorkitems" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/Source.Order" tokenref="Story.Source.Order" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/Story/Source.Name" tokenref="Story.Source.Name" />
+					<RelatedAsset nameref="StorySource" href="/EvalSystem/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Reference" token="Story.Reference" displayname="AttributeDefinition'Reference'Story" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/Workitem/Reference" tokenref="Workitem.Reference" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/Reference" tokenref="Story.Reference" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Story.Name" displayname="AttributeDefinition'Name'Story" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/Story/Name" tokenref="Story.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope" token="Story.Scope" displayname="AttributeDefinition'Scope'Story" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Scope/Workitems" tokenref="Scope.Stories" />
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Scope" />
+				</AttributeDefinition>			
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Story/Category">
+			<AttributeDefinition href="/EvalSystem/meta.v1/Story/Category" of="/EvalSystem/meta.v1/Story" version="7.2.9843.0" name="Category" token="Story.Category" displayname="AttributeDefinition'Category'Story" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+				<ReciprocalRelation href="/EvalSystem/meta.v1/StoryCategory/Stories" tokenref="StoryCategory.Stories" />
+				<OrderByAttribute href="/EvalSystem/meta.v1/Story/Category.Order" tokenref="Story.Category.Order" />
+				<DisplayByAttribute href="/EvalSystem/meta.v1/Story/Category.Name" tokenref="Story.Category.Name" />
+				<RelatedAsset nameref="StoryCategory" href="/EvalSystem/meta.v1/StoryCategory" />
+			</AttributeDefinition>
+		</Response>
+		<Response path="meta.v1/Scope">
+			<AssetType href="/VersionOne.Web/meta.v1/Scope" version="6.5.55555.30468" name="Scope" token="Scope" displayname="AssetType'Scope" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Scope.Name" displayname="AttributeDefinition'Name'Scope" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Scope/Name" tokenref="Scope.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Schedule">
+			<AssetType href="/VersionOne.Web/meta.v1/Schedule" version="6.5.55555.30468" name="Schedule" token="Schedule" displayname="AssetType'Schedule" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Schedule.Name" displayname="AttributeDefinition'Name'Schedule" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Schedule/Name" tokenref="Schedule.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/StorySource">
+			<AssetType href="/EvalSystem/meta.v1/StorySource" version="7.2.9843.0" name="StorySource" token="StorySource" displayname="AssetType'StorySource" abstract="False">
+				<Base nameref="List" href="/EvalSystem/meta.v1/List" />
+				<DefaultOrderBy href="/EvalSystem/meta.v1/StorySource/Order" tokenref="StorySource.Order" />
+				<DefaultDisplayBy href="/EvalSystem/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+				<AttributeDefinition name="ID" token="StorySource.ID" displayname="AttributeDefinition'ID'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/StorySource/ID" tokenref="StorySource.ID" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/StorySource/ID" tokenref="StorySource.ID" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+					<RelatedAsset nameref="StorySource" href="/EvalSystem/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="StorySource.AssetType" displayname="AttributeDefinition'AssetType'StorySource" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StorySource/AssetType" tokenref="StorySource.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="StorySource.Key" displayname="AttributeDefinition'Key'StorySource" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StorySource/Key" tokenref="StorySource.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="StorySource.Moment" displayname="AttributeDefinition'Moment'StorySource" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StorySource/Moment" tokenref="StorySource.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="StorySource.Name" displayname="AttributeDefinition'Name'StorySource" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/List/Name" tokenref="List.Name" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/StoryCategory">
+			<AssetType href="/EvalSystem/meta.v1/StoryCategory" version="7.2.9843.0" name="StoryCategory" token="StoryCategory" displayname="AssetType'StoryCategory" abstract="False">
+				<Base nameref="List" href="/EvalSystem/meta.v1/List" />
+				<DefaultOrderBy href="/EvalSystem/meta.v1/StoryCategory/Order" tokenref="StoryCategory.Order" />
+				<DefaultDisplayBy href="/EvalSystem/meta.v1/StoryCategory/Name" tokenref="StoryCategory.Name" />
+				<AttributeDefinition name="ID" token="StoryCategory.ID" displayname="AttributeDefinition'ID'StoryCategory" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/EvalSystem/meta.v1/StoryCategory/ID" tokenref="StoryCategory.ID" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/StoryCategory/ID" tokenref="StoryCategory.ID" />
+					<DisplayByAttribute href="/EvalSystem/meta.v1/StoryCategory/Name" tokenref="StoryCategory.Name" />
+					<RelatedAsset nameref="StoryCategory" href="/EvalSystem/meta.v1/StoryCategory" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="StoryCategory.AssetType" displayname="AttributeDefinition'AssetType'StoryCategory" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StoryCategory/AssetType" tokenref="StoryCategory.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="StoryCategory.Key" displayname="AttributeDefinition'Key'StoryCategory" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StoryCategory/Key" tokenref="StoryCategory.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="StoryCategory.Moment" displayname="AttributeDefinition'Moment'StoryCategory" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/EvalSystem/meta.v1/StoryCategory/Moment" tokenref="StoryCategory.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="StoryCategory.Name" displayname="AttributeDefinition'Name'StoryCategory" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/EvalSystem/meta.v1/List/Name" tokenref="List.Name" />
+					<OrderByAttribute href="/EvalSystem/meta.v1/StoryCategory/Name" tokenref="StoryCategory.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Story/Custom_CommunitySite">
+			<AttributeDefinition href="/evalsystem.stage/meta.v1/Story/Custom_CommunitySite" of="/evalsystem.stage/meta.v1/Story" version="8.0.55555.27158" name="Custom_CommunitySite" token="Story.Custom_CommunitySite" displayname="AttributeDefinition'Custom_CommunitySite'Story" attributetype="Boolean" isreadonly="False" isrequired="False" ismultivalue="False">
+				<OrderByAttribute href="/evalsystem.stage/meta.v1/Story/Custom_CommunitySite" tokenref="Story.Custom_CommunitySite" />
+			</AttributeDefinition>			
+		</Response>
+		<Response path="meta.v1/Link">
+			<AssetType href="/v1.six/meta.v1/Link" version="6.5.55555.21955" name="Link" token="Link" displayname="AssetType'Link" abstract="False">
+				<AttributeDefinition name="Asset" token="Link.Asset" displayname="AttributeDefinition'Asset'Link" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/v1.six/meta.v1/Story/Links" tokenref="Story.Links" />
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<DisplayByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<RelatedAsset nameref="BaseAsset" href="/v1.six/meta.v1/BaseAsset" />
+				</AttributeDefinition>
+				<AttributeDefinition name="OnMenu" token="Link.OnMenu" displayname="AttributeDefinition'OnMenu'Link" attributetype="Boolean" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/OnMenu" tokenref="Link.OnMenu" />
+				</AttributeDefinition>
+				<AttributeDefinition name="URL" token="Link.URL" displayname="AttributeDefinition'URL'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/URL" tokenref="Link.URL" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Link.Name" displayname="AttributeDefinition'Name'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Name" tokenref="Link.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="rest-1.v1/Data/Request?sel=Request.Name,Request.Reference,Request.Number,Request.Source,Request.Source.Name,Request.Custom_CommunityEdition,Request.CreatedBy&amp;where=Request.AssetState!='Closed'&amp;sort=Request.CreateDate">
+			<Assets total="2" pageSize="2147483647" pageStart="0">
+				<Asset href="/EvalSystem/rest-1.v1/Data/Request/1028" id="Request:1028">
+					<Attribute name="Name">#</Attribute>
+					<Attribute name="Reference">$</Attribute>
+					<Attribute name="Source">StorySource:2000</Attribute>
+					<Attribute name="Source.Name">XP</Attribute>
+					<Relation name="CreatedBy">
+						<Asset idref="Member:20" />
+					</Relation>
+					<Attribute name="Number">R-01000</Attribute>
+					<Attribute name="Custom_CommunityEdition">true</Attribute>
+				</Asset>
+				<Asset href="/EvalSystem/rest-1.v1/Data/Request/1027" id="Request:1027">
+					<Attribute name="Name">Company A</Attribute>
+					<Attribute name="Reference" />
+					<Attribute name="Source">StorySource:2001</Attribute>
+					<Attribute name="Source.Name">AgileUP</Attribute>
+					<Relation name="CreatedBy">
+						<Asset idref="Member:20" />
+					</Relation>
+					<Attribute name="Number">R-01001</Attribute>
+					<Attribute name="Custom_CommunityEdition">true</Attribute>
+				</Asset>
+			</Assets>
+		</Response>
+		<Response path="rest-1.v1/Data/StoryCategory?sel=&amp;where=StoryCategory.Name='Release+Y'">
+			<Asset href="/EvalSystem/rest-1.v1/Data/StoryCategory/1001" id="StoryCategory:1001"/>
+		</Response>
+		<Response path="rest-1.v1/Data/Story">
+			<Asset href="/EvalSystem/rest-1.v1/Data/Story/2000" id="Story:2000"/>
+		</Response>
+		<Response path="rest-1.v1/Data/Link">
+			<Asset href="/EvalSystem/rest-1.v1/Data/Link/3000" id="Link:3000"/>
+		</Response>
+		<Response path="rest-1.v1/Data/Note">
+			<Asset href="/EvalSystem/rest-1.v1/Data/Note/4000" id="Note:4000"/>
+		</Response>
+		<Response path="rest-1.v1/Data/Request/1027?op=Inactivate">
+			<Asset href="/EvalSystem/rest-1.v1/Data/Request/1027/4000" id="Request:1027:4000" />
+		</Response>
+	</Test>
+	<Test name="WorkitemWriterServiceTester">
+    <Response path="meta.v1/PrimaryWorkitem">
+      <AssetType href="/VersionOne11/meta.v1/PrimaryWorkitem" version="11.0.1.17" name="PrimaryWorkitem" token="PrimaryWorkitem" displayname="AssetType'PrimaryWorkitem" abstract="True">
+        <Base nameref="Workitem" href="/VersionOne11/meta.v1/Workitem"/>
+        <AttributeDefinition name="Name" token="PrimaryWorkitem.Name" displayname="AttributeDefinition'Name'PrimaryWorkitem" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+          <Base href="/VersionOne11/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name"/>
+          <OrderByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/Name" tokenref="PrimaryWorkitem.Name"/>
+        </AttributeDefinition>
+        <AttributeDefinition name="Source" token="PrimaryWorkitem.Source" displayname="AttributeDefinition'Source'PrimaryWorkitem" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+          <ReciprocalRelation href="/VersionOne11/meta.v1/StorySource/PrimaryWorkitems" tokenref="StorySource.PrimaryWorkitems"/>
+          <OrderByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/Source.Order" tokenref="PrimaryWorkitem.Source.Order"/>
+          <DisplayByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/Source.Name" tokenref="PrimaryWorkitem.Source.Name"/>
+          <RelatedAsset nameref="StorySource" href="/VersionOne11/meta.v1/StorySource"/>
+        </AttributeDefinition>
+        <AttributeDefinition name="AssetState" token="PrimaryWorkitem.AssetState" displayname="AttributeDefinition'AssetState'PrimaryWorkitem" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+          <Base href="/VersionOne11/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState"/>
+          <OrderByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/AssetState" tokenref="PrimaryWorkitem.AssetState"/>
+        </AttributeDefinition>
+        <!-- This Attribute Definition has been hacked, setting isreadonly=False for testing -->
+        <AttributeDefinition name="Number" token="PrimaryWorkitem.Number" displayname="AttributeDefinition'Number'PrimaryWorkitem" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+          <Base href="/VersionOne11/meta.v1/Workitem/Number" tokenref="Workitem.Number"/>
+          <OrderByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/Number" tokenref="PrimaryWorkitem.Number"/>
+        </AttributeDefinition>
+        <!-- This Attribute Definition has been hacked, setting isreadonly=False for testing -->
+        <AttributeDefinition name="ChangeDateUTC" token="PrimaryWorkitem.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'PrimaryWorkitem" attributetype="Date" isreadonly="False" isrequired="False" ismultivalue="False">
+          <Base href="/VersionOne11/meta.v1/BaseAsset/ChangeDateUTC" tokenref="BaseAsset.ChangeDateUTC"/>
+          <OrderByAttribute href="/VersionOne11/meta.v1/PrimaryWorkitem/ChangeDateUTC" tokenref="PrimaryWorkitem.ChangeDateUTC"/>
+        </AttributeDefinition>
+
+        <!--Cusom Field for Testing-->
+        <AttributeDefinition name="Custom_JiraId" token="PrimaryWorkitem.Custom_JiraId" displayname="AttributeDefinition'Custom_JiraId'PrimaryWorkitem" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+          <OrderByAttribute href="/versionone.web/meta.v1/PrimaryWorkitem/Custom_JiraId" tokenref="PrimaryWorkitem.Custom_JiraId" />
+        </AttributeDefinition>
+      </AssetType>
+    </Response>
+		<!-- This tester has hacked meta that allows a Defect Number to be edited. -->
+		<Response path="meta.v1/Defect">
+			<AssetType href="/VersionOne.Web/meta.v1/Defect" version="6.5.55555.30468" name="Defect" token="Defect" displayname="AssetType'Defect" abstract="False">
+				<Base nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				<AttributeDefinition name="Name" token="Defect.Name" displayname="AttributeDefinition'Name'Defect" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/r/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/VersionOne.Web/r/VersionOne.Web/meta.v1/Defect/Name" tokenref="Defect.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="Defect.Description" displayname="AttributeDefinition'Description'Defect" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/r/VersionOne.Web/meta.v1/BaseAsset/Description" tokenref="BaseAsset.Description" />
+					<OrderByAttribute href="/VersionOne.Web/r/VersionOne.Web/meta.v1/Defect/Description" tokenref="Defect.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AffectedPrimaryWorkitems" token="Defect.AffectedPrimaryWorkitems" displayname="AttributeDefinition'AffectedPrimaryWorkitems'Defect" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/PrimaryWorkitem/AffectedByDefects" tokenref="PrimaryWorkitem.AffectedByDefects" />
+					<RelatedAsset nameref="PrimaryWorkitem" href="/VersionOne.Web/meta.v1/PrimaryWorkitem" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Scope" token="Defect.Scope" displayname="AttributeDefinition'Scope'Defect" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Scope" tokenref="Workitem.Scope" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Scope/Workitems" tokenref="Scope.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Scope.Name" tokenref="Defect.Scope.Name" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Defect/Scope.Name" tokenref="Defect.Scope.Name" />
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Scope" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Timebox" token="Defect.Timebox" displayname="AttributeDefinition'Timebox'Defect" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Timebox" tokenref="Workitem.Timebox" />
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Timebox/Workitems" tokenref="Timebox.Workitems" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Timebox.EndDate" tokenref="Defect.Timebox.EndDate" />
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Defect/Timebox.Name" tokenref="Defect.Timebox.Name" />
+					<RelatedAsset nameref="Timebox" href="/VersionOne.Web/meta.v1/Timebox" />
+				</AttributeDefinition>
+				<!-- This Attribute Definition has been hacked, setting isreadonly=False for testing -->
+				<AttributeDefinition name="Number" token="Defect.Number" displayname="AttributeDefinition'Number'Defect" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Number" tokenref="Workitem.Number" />
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Defect/Number" tokenref="Defect.Number" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Owners" token="Defect.Owners"
+					displayname="AttributeDefinition'Owners'Defect" attributetype="Relation" isreadonly="False"
+					isrequired="False" ismultivalue="True">
+					<Base href="/VersionOne.Web/meta.v1/Workitem/Owners" tokenref="Workitem.Owners"/>
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Member/OwnedWorkitems"
+						tokenref="Member.OwnedWorkitems"/>
+					<RelatedAsset nameref="Member" href="/VersionOne.Web/meta.v1/Member"/>
+				</AttributeDefinition>
+				<AttributeDefinition name="ID" token="Defect.ID" displayname="AttributeDefinition'ID'Defect" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/versionone.web/meta.v1/Defect/ID" tokenref="Defect.ID" />
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/ID" tokenref="Defect.ID" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/Defect/Name" tokenref="Defect.Name" />
+					<RelatedAsset nameref="Defect" href="/versionone.web/meta.v1/Defect" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Source" token="Defect.Source" displayname="AttributeDefinition'Source'Defect" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/PrimaryWorkitem/Source" tokenref="PrimaryWorkitem.Source" />
+					<ReciprocalRelation href="/versionone.web/meta.v1/StorySource/PrimaryWorkitems" tokenref="StorySource.PrimaryWorkitems" />
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/Source.Order" tokenref="Defect.Source.Order" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/Defect/Source.Name" tokenref="Defect.Source.Name" />
+					<RelatedAsset nameref="StorySource" href="/versionone.web/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="Defect.AssetState" displayname="AttributeDefinition'AssetState'Defect" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState" />
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/AssetState" tokenref="Defect.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDate" token="Defect.ChangeDate" displayname="AttributeDefinition'ChangeDate'Defect" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/BaseAsset/ChangeDate" tokenref="BaseAsset.ChangeDate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/ChangeDate" tokenref="Defect.ChangeDate" />
+				</AttributeDefinition>
+				<!-- This Attribute Definition has been hacked, setting isreadonly=False for testing -->
+				<AttributeDefinition name="ChangeDateUTC" token="Defect.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'Defect" attributetype="Date" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/BaseAsset/ChangeDateUTC" tokenref="BaseAsset.ChangeDateUTC" />
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/ChangeDateUTC" tokenref="Defect.ChangeDateUTC" />
+				</AttributeDefinition>
+
+
+
+				<!--Cusom Field for Testing-->
+				<AttributeDefinition name="Custom_JiraId" token="Defect.Custom_JiraId" displayname="AttributeDefinition'Custom_JiraId'Defect" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/Defect/Custom_JiraId" tokenref="Defect.Custom_JiraId" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Scope">
+			<AssetType href="/VersionOne.Web/meta.v1/Scope" version="6.5.55555.30468" name="Scope" token="Scope" displayname="AssetType'Scope" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Scope.Name" displayname="AttributeDefinition'Name'Scope" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Scope/Name" tokenref="Scope.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="Scope.AssetState"
+					displayname="AttributeDefinition'AssetState'Scope" attributetype="State" isreadonly="True"
+					isrequired="False" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/AssetState" tokenref="BaseAsset.AssetState"/>
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Scope/AssetState"
+						tokenref="Scope.AssetState"/>
+				</AttributeDefinition>
+				<AttributeDefinition name="Parent" token="Scope.Parent"
+					displayname="AttributeDefinition'Parent'Scope" attributetype="Relation" isreadonly="False"
+					isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/VersionOne.Web/meta.v1/Scope/Children" tokenref="Scope.Children"/>
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Scope/Parent.Name"
+						tokenref="Scope.Parent.Name"/>
+					<DisplayByAttribute href="/VersionOne.Web/meta.v1/Scope/Parent.Name"
+						tokenref="Scope.Parent.Name"/>
+					<RelatedAsset nameref="Scope" href="/VersionOne.Web/meta.v1/Scope"/>
+				</AttributeDefinition>
+				
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Schedule">
+			<AssetType href="/VersionOne.Web/meta.v1/Schedule" version="6.5.55555.30468" name="Schedule" token="Schedule" displayname="AssetType'Schedule" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset" />
+				<AttributeDefinition name="Name" token="Schedule.Name" displayname="AttributeDefinition'Name'Schedule" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/8715/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name" />
+					<OrderByAttribute href="/8715/meta.v1/Schedule/Name" tokenref="Schedule.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+
+		<Response path="meta.v1/Member">
+			<AssetType href="/VersionOne.Web/meta.v1/Member" version="7.3.55555.28224" name="Member" token="Member" displayname="AssetType'Member" abstract="False">
+				<Base nameref="BaseAsset" href="/VersionOne.Web/meta.v1/BaseAsset"/>
+				<AttributeDefinition name="Name" token="Member.Name" displayname="AttributeDefinition'Name'Member" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/VersionOne.Web/meta.v1/BaseAsset/Name" tokenref="BaseAsset.Name"/>
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Member/Name" tokenref="Member.Name"/>
+				</AttributeDefinition>
+				<AttributeDefinition name="Username" token="Member.Username" displayname="AttributeDefinition'Username'Member" attributetype="Text" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/VersionOne.Web/meta.v1/Member/Username" tokenref="Member.Username" />
+				</AttributeDefinition>
+
+			</AssetType>
+		</Response>
+		<Response path="meta.v1/Link">
+			<AssetType href="/v1.six/meta.v1/Link" version="6.5.55555.21955" name="Link" token="Link" displayname="AssetType'Link" abstract="False">
+				<AttributeDefinition name="Asset" token="Link.Asset" displayname="AttributeDefinition'Asset'Link" attributetype="Relation" isreadonly="False" isrequired="True" ismultivalue="False">
+					<ReciprocalRelation href="/v1.six/meta.v1/ChangeSet/Links" tokenref="ChangeSet.Links" />
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<DisplayByAttribute href="/v1.six/meta.v1/Link/Asset.Name" tokenref="Link.Asset.Name" />
+					<RelatedAsset nameref="ChangeSet" href="/v1.six/meta.v1/ChangeSet" />
+				</AttributeDefinition>
+				<AttributeDefinition name="OnMenu" token="Link.OnMenu" displayname="AttributeDefinition'OnMenu'Link" attributetype="Boolean" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/OnMenu" tokenref="Link.OnMenu" />
+				</AttributeDefinition>
+				<AttributeDefinition name="URL" token="Link.URL" displayname="AttributeDefinition'URL'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/URL" tokenref="Link.URL" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="Link.Name" displayname="AttributeDefinition'Name'Link" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/v1.six/meta.v1/Link/Name" tokenref="Link.Name" />
+				</AttributeDefinition>
+			</AssetType>
+		</Response>
+
+		<Response path="meta.v1/List">
+			<AssetType href="/versionone.web/meta.v1/List" version="8.0.55555.29519" name="List" token="List" displayname="AssetType'List" abstract="True">
+				<DefaultOrderBy href="/versionone.web/meta.v1/List/Order" tokenref="List.Order" />
+				<DefaultDisplayBy href="/versionone.web/meta.v1/List/Name" tokenref="List.Name" />
+				<AttributeDefinition name="ID" token="List.ID" displayname="AttributeDefinition'ID'List" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/versionone.web/meta.v1/List/ID" tokenref="List.ID" />
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ID" tokenref="List.ID" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/List/Name" tokenref="List.Name" />
+					<RelatedAsset nameref="List" href="/versionone.web/meta.v1/List" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="List.AssetType" displayname="AttributeDefinition'AssetType'List" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/AssetType" tokenref="List.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="List.Key" displayname="AttributeDefinition'Key'List" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Key" tokenref="List.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="List.Moment" displayname="AttributeDefinition'Moment'List" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Moment" tokenref="List.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDate" token="List.ChangeDate" displayname="AttributeDefinition'ChangeDate'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ChangeDate" tokenref="List.ChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDate" token="List.RetireDate" displayname="AttributeDefinition'RetireDate'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/RetireDate" tokenref="List.RetireDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDate" token="List.CreateDate" displayname="AttributeDefinition'CreateDate'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CreateDate" tokenref="List.CreateDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeDate" token="List.MyLastChangeDate" displayname="AttributeDefinition'MyLastChangeDate'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/MyLastChangeDate" tokenref="List.MyLastChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDateUTC" token="List.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ChangeDateUTC" tokenref="List.ChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDateUTC" token="List.RetireDateUTC" displayname="AttributeDefinition'RetireDateUTC'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/RetireDateUTC" tokenref="List.RetireDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDateUTC" token="List.CreateDateUTC" displayname="AttributeDefinition'CreateDateUTC'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CreateDateUTC" tokenref="List.CreateDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeDateUTC" token="List.MyLastChangeDateUTC" displayname="AttributeDefinition'MyLastChangeDateUTC'List" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/MyLastChangeDateUTC" tokenref="List.MyLastChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeReason" token="List.ChangeReason" displayname="AttributeDefinition'ChangeReason'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ChangeReason" tokenref="List.ChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireReason" token="List.RetireReason" displayname="AttributeDefinition'RetireReason'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/RetireReason" tokenref="List.RetireReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateReason" token="List.CreateReason" displayname="AttributeDefinition'CreateReason'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CreateReason" tokenref="List.CreateReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeReason" token="List.MyLastChangeReason" displayname="AttributeDefinition'MyLastChangeReason'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/MyLastChangeReason" tokenref="List.MyLastChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeComment" token="List.ChangeComment" displayname="AttributeDefinition'ChangeComment'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ChangeComment" tokenref="List.ChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireComment" token="List.RetireComment" displayname="AttributeDefinition'RetireComment'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/RetireComment" tokenref="List.RetireComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateComment" token="List.CreateComment" displayname="AttributeDefinition'CreateComment'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CreateComment" tokenref="List.CreateComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeComment" token="List.MyLastChangeComment" displayname="AttributeDefinition'MyLastChangeComment'List" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/MyLastChangeComment" tokenref="List.MyLastChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangedBy" token="List.ChangedBy" displayname="AttributeDefinition'ChangedBy'List" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/ChangedBy.Name" tokenref="List.ChangedBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/List/ChangedBy.Name" tokenref="List.ChangedBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetiredBy" token="List.RetiredBy" displayname="AttributeDefinition'RetiredBy'List" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/RetiredBy.Name" tokenref="List.RetiredBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/List/RetiredBy.Name" tokenref="List.RetiredBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreatedBy" token="List.CreatedBy" displayname="AttributeDefinition'CreatedBy'List" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CreatedBy.Name" tokenref="List.CreatedBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/List/CreatedBy.Name" tokenref="List.CreatedBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Prior" token="List.Prior" displayname="AttributeDefinition'Prior'List" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Prior.Order" tokenref="List.Prior.Order" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/List/Prior.Name" tokenref="List.Prior.Name" />
+					<RelatedAsset nameref="List" href="/versionone.web/meta.v1/List" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="List.AssetState" displayname="AttributeDefinition'AssetState'List" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/AssetState" tokenref="List.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Order" token="List.Order" displayname="AttributeDefinition'Order'List" attributetype="Rank" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Order" tokenref="List.Order" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="List.Description" displayname="AttributeDefinition'Description'List" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Description" tokenref="List.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="List.Name" displayname="AttributeDefinition'Name'List" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Name" tokenref="List.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CanUpdate" token="List.CanUpdate" displayname="AttributeDefinition'CanUpdate'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CanUpdate" tokenref="List.CanUpdate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsReadOnly" token="List.IsReadOnly" displayname="AttributeDefinition'IsReadOnly'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/IsReadOnly" tokenref="List.IsReadOnly" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeletable" token="List.IsDeletable" displayname="AttributeDefinition'IsDeletable'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeleted" token="List.IsDeleted" displayname="AttributeDefinition'IsDeleted'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/IsDeleted" tokenref="List.IsDeleted" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Inactive" token="List.Inactive" displayname="AttributeDefinition'Inactive'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/Inactive" tokenref="List.Inactive" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckActivate" token="List.CheckActivate" displayname="AttributeDefinition'CheckActivate'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckInactivate" token="List.CheckInactivate" displayname="AttributeDefinition'CheckInactivate'List" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+				</AttributeDefinition>
+				<Operation name="Activate">
+					<Validator href="/versionone.web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+				</Operation>
+				<Operation name="Delete">
+					<Validator href="/versionone.web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+				</Operation>
+				<Operation name="Inactivate">
+					<Validator href="/versionone.web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+				</Operation>
+			</AssetType>
+		</Response>
+
+			<Response path="meta.v1/StorySource">
+			<AssetType href="/versionone.web/meta.v1/StorySource" version="8.0.55555.29519" name="StorySource" token="StorySource" displayname="AssetType'StorySource" abstract="False">
+				<Base nameref="List" href="/versionone.web/meta.v1/List" />
+				<DefaultOrderBy href="/versionone.web/meta.v1/StorySource/Order" tokenref="StorySource.Order" />
+				<DefaultDisplayBy href="/versionone.web/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+				<AttributeDefinition name="ChangeDate" token="StorySource.ChangeDate" displayname="AttributeDefinition'ChangeDate'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/ChangeDate" tokenref="List.ChangeDate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ChangeDate" tokenref="StorySource.ChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDate" token="StorySource.RetireDate" displayname="AttributeDefinition'RetireDate'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/RetireDate" tokenref="List.RetireDate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/RetireDate" tokenref="StorySource.RetireDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDate" token="StorySource.CreateDate" displayname="AttributeDefinition'CreateDate'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CreateDate" tokenref="List.CreateDate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CreateDate" tokenref="StorySource.CreateDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeDate" token="StorySource.MyLastChangeDate" displayname="AttributeDefinition'MyLastChangeDate'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/MyLastChangeDate" tokenref="List.MyLastChangeDate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/MyLastChangeDate" tokenref="StorySource.MyLastChangeDate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeDateUTC" token="StorySource.ChangeDateUTC" displayname="AttributeDefinition'ChangeDateUTC'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/ChangeDateUTC" tokenref="List.ChangeDateUTC" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ChangeDateUTC" tokenref="StorySource.ChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireDateUTC" token="StorySource.RetireDateUTC" displayname="AttributeDefinition'RetireDateUTC'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/RetireDateUTC" tokenref="List.RetireDateUTC" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/RetireDateUTC" tokenref="StorySource.RetireDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateDateUTC" token="StorySource.CreateDateUTC" displayname="AttributeDefinition'CreateDateUTC'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CreateDateUTC" tokenref="List.CreateDateUTC" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CreateDateUTC" tokenref="StorySource.CreateDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeDateUTC" token="StorySource.MyLastChangeDateUTC" displayname="AttributeDefinition'MyLastChangeDateUTC'StorySource" attributetype="Date" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/MyLastChangeDateUTC" tokenref="List.MyLastChangeDateUTC" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/MyLastChangeDateUTC" tokenref="StorySource.MyLastChangeDateUTC" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeReason" token="StorySource.ChangeReason" displayname="AttributeDefinition'ChangeReason'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/ChangeReason" tokenref="List.ChangeReason" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ChangeReason" tokenref="StorySource.ChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireReason" token="StorySource.RetireReason" displayname="AttributeDefinition'RetireReason'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/RetireReason" tokenref="List.RetireReason" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/RetireReason" tokenref="StorySource.RetireReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateReason" token="StorySource.CreateReason" displayname="AttributeDefinition'CreateReason'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CreateReason" tokenref="List.CreateReason" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CreateReason" tokenref="StorySource.CreateReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeReason" token="StorySource.MyLastChangeReason" displayname="AttributeDefinition'MyLastChangeReason'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/MyLastChangeReason" tokenref="List.MyLastChangeReason" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/MyLastChangeReason" tokenref="StorySource.MyLastChangeReason" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangeComment" token="StorySource.ChangeComment" displayname="AttributeDefinition'ChangeComment'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/ChangeComment" tokenref="List.ChangeComment" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ChangeComment" tokenref="StorySource.ChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetireComment" token="StorySource.RetireComment" displayname="AttributeDefinition'RetireComment'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/RetireComment" tokenref="List.RetireComment" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/RetireComment" tokenref="StorySource.RetireComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreateComment" token="StorySource.CreateComment" displayname="AttributeDefinition'CreateComment'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CreateComment" tokenref="List.CreateComment" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CreateComment" tokenref="StorySource.CreateComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="MyLastChangeComment" token="StorySource.MyLastChangeComment" displayname="AttributeDefinition'MyLastChangeComment'StorySource" attributetype="Text" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/MyLastChangeComment" tokenref="List.MyLastChangeComment" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/MyLastChangeComment" tokenref="StorySource.MyLastChangeComment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ChangedBy" token="StorySource.ChangedBy" displayname="AttributeDefinition'ChangedBy'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/ChangedBy" tokenref="List.ChangedBy" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ChangedBy.Name" tokenref="StorySource.ChangedBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/StorySource/ChangedBy.Name" tokenref="StorySource.ChangedBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="RetiredBy" token="StorySource.RetiredBy" displayname="AttributeDefinition'RetiredBy'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/RetiredBy" tokenref="List.RetiredBy" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/RetiredBy.Name" tokenref="StorySource.RetiredBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/StorySource/RetiredBy.Name" tokenref="StorySource.RetiredBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CreatedBy" token="StorySource.CreatedBy" displayname="AttributeDefinition'CreatedBy'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CreatedBy" tokenref="List.CreatedBy" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CreatedBy.Name" tokenref="StorySource.CreatedBy.Name" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/StorySource/CreatedBy.Name" tokenref="StorySource.CreatedBy.Name" />
+					<RelatedAsset nameref="Member" href="/versionone.web/meta.v1/Member" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Prior" token="StorySource.Prior" displayname="AttributeDefinition'Prior'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/Prior" tokenref="List.Prior" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Prior.Order" tokenref="StorySource.Prior.Order" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/StorySource/Prior.Name" tokenref="StorySource.Prior.Name" />
+					<RelatedAsset nameref="StorySource" href="/versionone.web/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="ID" token="StorySource.ID" displayname="AttributeDefinition'ID'StorySource" attributetype="Relation" isreadonly="True" isrequired="False" ismultivalue="False">
+					<ReciprocalRelation href="/versionone.web/meta.v1/StorySource/ID" tokenref="StorySource.ID" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/ID" tokenref="StorySource.ID" />
+					<DisplayByAttribute href="/versionone.web/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+					<RelatedAsset nameref="StorySource" href="/versionone.web/meta.v1/StorySource" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetType" token="StorySource.AssetType" displayname="AttributeDefinition'AssetType'StorySource" attributetype="AssetType" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/AssetType" tokenref="StorySource.AssetType" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Key" token="StorySource.Key" displayname="AttributeDefinition'Key'StorySource" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Key" tokenref="StorySource.Key" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Moment" token="StorySource.Moment" displayname="AttributeDefinition'Moment'StorySource" attributetype="Opaque" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Moment" tokenref="StorySource.Moment" />
+				</AttributeDefinition>
+				<AttributeDefinition name="PrimaryWorkitems" token="StorySource.PrimaryWorkitems" displayname="AttributeDefinition'PrimaryWorkitems'StorySource" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/versionone.web/meta.v1/PrimaryWorkitem/Source" tokenref="PrimaryWorkitem.Source" />
+					<RelatedAsset nameref="PrimaryWorkitem" href="/versionone.web/meta.v1/PrimaryWorkitem" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Requests" token="StorySource.Requests" displayname="AttributeDefinition'Requests'StorySource" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/versionone.web/meta.v1/Request/Source" tokenref="Request.Source" />
+					<RelatedAsset nameref="Request" href="/versionone.web/meta.v1/Request" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Issues" token="StorySource.Issues" displayname="AttributeDefinition'Issues'StorySource" attributetype="Relation" isreadonly="False" isrequired="False" ismultivalue="True">
+					<ReciprocalRelation href="/versionone.web/meta.v1/Issue/Source" tokenref="Issue.Source" />
+					<RelatedAsset nameref="Issue" href="/versionone.web/meta.v1/Issue" />
+				</AttributeDefinition>
+				<AttributeDefinition name="AssetState" token="StorySource.AssetState" displayname="AttributeDefinition'AssetState'StorySource" attributetype="State" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/AssetState" tokenref="List.AssetState" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/AssetState" tokenref="StorySource.AssetState" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Order" token="StorySource.Order" displayname="AttributeDefinition'Order'StorySource" attributetype="Rank" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/Order" tokenref="List.Order" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Order" tokenref="StorySource.Order" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Description" token="StorySource.Description" displayname="AttributeDefinition'Description'StorySource" attributetype="LongText" isreadonly="False" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/Description" tokenref="List.Description" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Description" tokenref="StorySource.Description" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Name" token="StorySource.Name" displayname="AttributeDefinition'Name'StorySource" attributetype="Text" isreadonly="False" isrequired="True" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/Name" tokenref="List.Name" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Name" tokenref="StorySource.Name" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CanUpdate" token="StorySource.CanUpdate" displayname="AttributeDefinition'CanUpdate'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CanUpdate" tokenref="StorySource.CanUpdate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsReadOnly" token="StorySource.IsReadOnly" displayname="AttributeDefinition'IsReadOnly'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/IsReadOnly" tokenref="List.IsReadOnly" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/IsReadOnly" tokenref="StorySource.IsReadOnly" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeletable" token="StorySource.IsDeletable" displayname="AttributeDefinition'IsDeletable'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/IsDeletable" tokenref="StorySource.IsDeletable" />
+				</AttributeDefinition>
+				<AttributeDefinition name="IsDeleted" token="StorySource.IsDeleted" displayname="AttributeDefinition'IsDeleted'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/IsDeleted" tokenref="List.IsDeleted" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/IsDeleted" tokenref="StorySource.IsDeleted" />
+				</AttributeDefinition>
+				<AttributeDefinition name="Inactive" token="StorySource.Inactive" displayname="AttributeDefinition'Inactive'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/Inactive" tokenref="List.Inactive" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/Inactive" tokenref="StorySource.Inactive" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckActivate" token="StorySource.CheckActivate" displayname="AttributeDefinition'CheckActivate'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CheckActivate" tokenref="StorySource.CheckActivate" />
+				</AttributeDefinition>
+				<AttributeDefinition name="CheckInactivate" token="StorySource.CheckInactivate" displayname="AttributeDefinition'CheckInactivate'StorySource" attributetype="Boolean" isreadonly="True" isrequired="False" ismultivalue="False">
+					<Base href="/versionone.web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+					<OrderByAttribute href="/versionone.web/meta.v1/StorySource/CheckInactivate" tokenref="StorySource.CheckInactivate" />
+				</AttributeDefinition>
+				<Operation name="Activate">
+					<Validator href="/versionone.web/meta.v1/List/CheckActivate" tokenref="List.CheckActivate" />
+				</Operation>
+				<Operation name="Delete">
+					<Validator href="/versionone.web/meta.v1/List/IsDeletable" tokenref="List.IsDeletable" />
+				</Operation>
+				<Operation name="Inactivate">
+					<Validator href="/versionone.web/meta.v1/List/CheckInactivate" tokenref="List.CheckInactivate" />
+				</Operation>
+			</AssetType>
+		</Response>
+	</Test>
+</TestData>

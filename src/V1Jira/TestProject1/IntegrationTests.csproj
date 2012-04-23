@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9185295C-7A36-44E9-A703-7D9CD737DF34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegrationTests</RootNamespace>
+    <AssemblyName>TestProject1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\dependencies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VersionOne.SDK.APIClient">
+      <HintPath>..\Common\VersionOne.SDK.APIClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationReaderTest.cs" />
+    <Compile Include="WorkitemWriterTest.cs" />
+    <Compile Include="Enviornments\Development.cs" />
+    <Compile Include="Enviornments\Enviornment.cs" />
+    <Compile Include="Enviornments\Produkcja.cs" />
+    <Compile Include="ExternalWorkitemQuerierTest.cs" />
+    <Compile Include="Factory\LoggerFactory.cs" />
+    <Compile Include="Factory\V1ProcessorFactory.cs" />
+    <Compile Include="JiraUpdaterTest.cs" />
+    <Compile Include="Logger\LoggerImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JiraTimeZoneTest.cs" />
+    <Compile Include="VersionOneQueryBuilderTest.cs" />
+    <Compile Include="VersionOneProcessorTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VersionOne.Jira.SoapProxy\VersionOne.Jira.SoapProxy.csproj">
+      <Project>{57F712AE-9E25-4578-BB06-71AFE3121DEB}</Project>
+      <Name>VersionOne.Jira.SoapProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServerConnector\VersionOne.ServerConnector.csproj">
+      <Project>{19A13CA5-7461-4453-8A5E-9C5A7A55C4D5}</Project>
+      <Name>VersionOne.ServerConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.Core\VersionOne.ServiceHost.Core.csproj">
+      <Project>{F432BAC8-27ED-4C2C-8E06-EF806A5B0D79}</Project>
+      <Name>VersionOne.ServiceHost.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.JiraServices\VersionOne.ServiceHost.JiraServices.csproj">
+      <Project>{7CFCE842-CC70-4902-AB69-2A87EFE354BE}</Project>
+      <Name>VersionOne.ServiceHost.JiraServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.WorkitemServices\VersionOne.ServiceHost.WorkitemServices.csproj">
+      <Project>{76B6D3F1-16F8-43A9-A2B7-DDADAFE70D0D}</Project>
+      <Name>VersionOne.ServiceHost.WorkitemServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

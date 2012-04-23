@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="log data">
+			<Node name="row0">
+				<Node name="messages"/>
+				<Prp name="start time" type="D" value="39916.6865175694"/><!-- 13.04.2009 16:28:35 -->
+				<Prp name="ownerid" type="I" value="-1"/>
+				<Prp name="end time" type="D" value="39916.6866222685"/>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="status" type="I" value="0"/>
+				<Prp name="name" type="S" value="Test Log [Unit1\Main]"/>
+				<Prp name="details" type="S" value="{F30B75A3-27C1-4D99-A3BC-1303CA11C3DB}"/>
+			</Node>
+		</Node>
+	</Node>
+</Nodes>

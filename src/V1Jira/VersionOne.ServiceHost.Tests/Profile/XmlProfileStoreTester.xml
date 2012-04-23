@@ -1,0 +1,9 @@
+﻿<profileroot>
+  <firstvalue value="Value 1">
+    <child value='A child value' />
+  </firstvalue>
+  <!-- comment -->
+  <secondvalue value="Value 2" />
+  <third_x3Avalue value="Value 3"></third_x3Avalue>
+  <forth_x40value value="Value 4"></forth_x40value>
+</profileroot>

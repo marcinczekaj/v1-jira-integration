@@ -1,0 +1,58 @@
+﻿<Report ver="2.0" tmZone="Eastern Standard Time">
+    <General productName="QuickTest Professional" productVer="9.2" os="Windows 2003" host="MERCURYTEST"></General>
+    <Doc rID="T1" productName="QuickTest Professional">
+        <DName><![CDATA[Test1]]></DName>
+        <Res><![CDATA[Res6]]></Res>
+        <DT rID="T2"></DT>
+        <DIter rID="T3" iterID="1">
+            <Action rID="T4">
+                <AName><![CDATA[Log in to V1]]></AName>
+                <Step rID="T5">
+                    <Obj><![CDATA[TestReportName]]></Obj>
+                    <Details><![CDATA[TestReportDetails]]></Details>
+                    <Time><![CDATA[10/26/2007 - 15:16:25]]></Time>
+                    <NodeArgs eType="User" icon="5" nRep="8">
+                        <Disp><![CDATA[TestReportName]]></Disp>
+                    </NodeArgs>
+                </Step>
+                <Step rID="T6">
+                    <Obj plainTxt="False"><![CDATA[VersionOne]]></Obj>
+                    <Details plainTxt="False"><![CDATA[Browser]]></Details>
+                    <Time><![CDATA[10/26/2007 - 10:21:04]]></Time>
+                    <Step rID="T7"></Step>
+                    <Step rID="T10">
+                        <Obj plainTxt="False"><![CDATA[MyHome]]></Obj>
+                        <Details plainTxt="False"><![CDATA[Page]]></Details>
+                        <Time><![CDATA[10/26/2007 - 10:21:07]]></Time>
+                        <Step rID="T11"></Step>
+                        <HtmlStep rID="T12">
+                            <HTML></HTML>
+                            <NodeArgs eType="Verification" icon="6" nRep="26" status="Failed">
+                                <Disp><![CDATA[Checkpoint "MyHome"]]></Disp>
+                                <BtmPane vType="HTMLSNSH"></BtmPane>
+                            </NodeArgs>
+                        </HtmlStep>
+                        <NodeArgs eType="Context" icon="6" nRep="23" status="Failed">
+                            <Disp><![CDATA[MyHome]]></Disp>
+                        </NodeArgs>
+                    </Step>
+                    <Step rID="T13"></Step>
+                    <NodeArgs eType="Context" icon="5" nRep="12" status="Failed">
+                        <Disp><![CDATA[VersionOne]]></Disp>
+                    </NodeArgs>
+                </Step>
+                <Summary sTime="10/26/2007 - 10:21:01" eTime="10/26/2007 - 10:21:10" passed="0" failed="1" warnings="0"/>
+                <NodeArgs eType="StartAction" icon="4" nRep="9" status="Failed">
+                    <Disp><![CDATA[Log in to V1 Summary]]></Disp>
+                </NodeArgs>
+            </Action>
+            <NodeArgs eType="StartIteration" icon="3" nRep="8" status="Failed">
+                <Disp><![CDATA[Test1 Iteration 1 (Row 1)]]></Disp>
+            </NodeArgs>
+        </DIter>
+        <Summary sTime="10/26/2007 - 10:20:57" eTime="10/26/2007 - 10:21:10" passed="0" failed="1" warnings="0"/>
+        <NodeArgs eType="StartTest" icon="1" nRep="5" status="Failed">
+            <Disp><![CDATA[Test Test1 Summary]]></Disp>
+        </NodeArgs>
+    </Doc>
+</Report>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="log data">
+			<Node name="row0">
+				<Node name="messages">
+					<Node name="row0">
+						<Prp name="time" type="D" value="39916.6863982176"/>
+						<Prp name="message" type="S" value="An exception occurred while the element specified in the 'ProjectTestItem2' test item was being executed."/>
+						<Prp name="type" type="I" value="2"/>
+						<Prp name="priority" type="I" value="300"/>
+						<Prp name="index" type="I" value="0"/>
+						<Prp name="extended message" type="S" value=""/>
+					</Node>
+				</Node>
+				<Prp name="start time" type="D" value="39916.6916303125"/>
+				<Prp name="ownerid" type="I" value="-1"/>
+				<Prp name="end time" type="D" value="39916.6917073495"/>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="status" type="I" value="2"/>
+				<Prp name="name" type="S" value="Test Log [Unit2\Main]"/>
+				<Prp name="details" type="S" value="{D1F1FBC1-A85D-40D4-8627-D0961012C464}"/>
+			</Node>
+		</Node>
+	</Node>
+</Nodes>

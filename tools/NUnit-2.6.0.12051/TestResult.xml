@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\VersionOne.ServiceHost.Tests.csproj" total="5" errors="3" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-04-17" time="14:06:06">
+  <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.5446" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\GIT_repositories\cto-v1-jira-integration-for-merge\tools\NUnit-2.6.0.12051\bin" machine-name="H8530330038031" user="sg0207112" user-domain="GLOBAL" />
+  <culture-info current-culture="pl-PL" current-uiculture="en-US" />
+  <test-suite type="Project" name="C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\VersionOne.ServiceHost.Tests.csproj" executed="True" result="Failure" success="False" time="0.693" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\bin\Debug\VersionOne.ServiceHost.Tests.dll" executed="True" result="Failure" success="False" time="0.685" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="VersionOne" executed="True" result="Failure" success="False" time="0.685" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="ServiceHost" executed="True" result="Failure" success="False" time="0.685" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="0.685" asserts="0">
+                    <results>
+                      <test-suite type="Namespace" name="WorkitemServices" executed="True" result="Failure" success="False" time="0.684" asserts="0">
+                        <results>
+                          <test-suite type="Namespace" name="Jira" executed="True" result="Failure" success="False" time="0.684" asserts="0">
+                            <results>
+                              <test-suite type="TestFixture" name="JiraReaderServiceTester" executed="True" result="Failure" success="False" time="0.684" asserts="0">
+                                <results>
+                                  <test-case name="VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemCreated" executed="True" result="Success" success="True" time="0.516" asserts="0" />
+                                  <test-case name="VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemCreatedInsufficientPermissions" executed="True" result="Success" success="True" time="0.008" asserts="0" />
+                                  <test-case name="VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChanged" executed="True" result="Error" success="False" time="0.011" asserts="0">
+                                    <failure>
+                                      <message><![CDATA[System.NotImplementedException : Don't use this constructor]]></message>
+                                      <stack-trace><![CDATA[at VersionOne.ServiceHost.WorkitemServices.WorkitemStateChangeResult..ctor(String externalId, String workitemId) in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.WorkitemServices\WorkitemStateChangeResult.cs:line 7
+at VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChanged() in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\WorkitemServices\Jira\JiraReaderServiceTester.cs:line 69
+]]></stack-trace>
+                                    </failure>
+                                  </test-case>
+                                  <test-case name="VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChangedWithEmptyData" executed="True" result="Error" success="False" time="0.003" asserts="0">
+                                    <failure>
+                                      <message><![CDATA[System.NotImplementedException : Don't use this constructor]]></message>
+                                      <stack-trace><![CDATA[at VersionOne.ServiceHost.WorkitemServices.WorkitemStateChangeResult..ctor(String externalId, String workitemId) in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.WorkitemServices\WorkitemStateChangeResult.cs:line 7
+at VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChangedWithEmptyData() in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\WorkitemServices\Jira\JiraReaderServiceTester.cs:line 129
+]]></stack-trace>
+                                    </failure>
+                                  </test-case>
+                                  <test-case name="VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChangedWithoutWorkflowProgress" executed="True" result="Error" success="False" time="0.003" asserts="0">
+                                    <failure>
+                                      <message><![CDATA[System.NotImplementedException : Don't use this constructor]]></message>
+                                      <stack-trace><![CDATA[at VersionOne.ServiceHost.WorkitemServices.WorkitemStateChangeResult..ctor(String externalId, String workitemId) in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.WorkitemServices\WorkitemStateChangeResult.cs:line 7
+at VersionOne.ServiceHost.Tests.WorkitemServices.Jira.JiraReaderServiceTester.OnWorkitemStateChangedWithoutWorkflowProgress() in C:\GIT_repositories\cto-v1-jira-integration-for-merge\src\V1Jira\VersionOne.ServiceHost.Tests\WorkitemServices\Jira\JiraReaderServiceTester.cs:line 102
+]]></stack-trace>
+                                    </failure>
+                                  </test-case>
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--(c) Copyright 2009, VersionOne, Inc. All rights reserved. (c)-->
+<profile>
+  <DefectWriterHostedService>
+    <LastClosedDefectCheck value="06/10/2011 08:27:04" />
+    <LastClosedDefectId value="D-75882" />
+  </DefectWriterHostedService>
+  <WorkitemWriterService>
+    <LastCheckForClosedWorkitems value="02/16/2012 09:13:23.590" />
+    <LastClosedWorkitemId value="S-262262" />
+    <LastCheckForSynchronizedWorkitems value="03/12/2012 10:04:43.960" />
+    <LastSynchronizedWorkitemId value="D-78724" />
+  </WorkitemWriterService>
+  <JiraService>
+    <LastQueryForModifiedItems value="03/16/2012 09:37:23.000" />
+  </JiraService>
+</profile>

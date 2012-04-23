@@ -1,0 +1,17 @@
+
+/src/V1Jira/_UpgradeReport_Files
+/src/V1Jira/VersionOne.ServiceHost.WorkitemServices/obj
+/src/V1Jira/VersionOne.ServiceHost.WorkitemServices/bin
+/src/V1Jira/.gitignore
+/src/V1Jira/UpgradeLog.XML
+/src/V1Jira/VersionOne.Jira.SoapProxy/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.Jira.SoapProxy/obj/Debug/ResolveAssemblyReference.cache
+/src/V1Jira/VersionOne.ServerConnector/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.ServiceExecutor/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.ServiceHost.Core/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.ServiceHost.Core/obj/Debug/ResolveAssemblyReference.cache
+/src/V1Jira/VersionOne.ServiceHost.JiraServices/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.ServiceHost.JiraServices/obj/Debug/ResolveAssemblyReference.cache
+/src/V1Jira/VersionOne.ServiceHost/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/src/V1Jira/VersionOne.ServiceHost/obj/Debug/ResolveAssemblyReference.cache
+/src/V1Jira/TestResults

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0"?>
+<suiteResults>
+  <rootPath>SuiteVersionOneApiClient</rootPath>
+  <FitNesseVersion>v20110104</FitNesseVersion>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.TestBlankAndNullKeywords</name>
+    <counts>
+      <right>2</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>12</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.TestBooleanSymbols</name>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>34</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.SubSuite.TestErrorKeyword</name>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>4</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>56</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.SubSuite.TestExceptionKeywordHandler</name>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>4</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <runTimeInMillis>78</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.SubSuite.SubSubSuite.TestExceptionKeywordHandler</name>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>90</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.SuiteAT.SubSuite.SubSubSuite.TestErrorKeyword</name>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>4</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>13</runTimeInMillis>
+  </pageHistoryReference>
+  
+  <pageHistoryReference>
+    <name>FrontPage.SuiteVersionOneApiClient.AnotherSuite.TestExceptionKeywordHandler</name>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>4</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>24</runTimeInMillis>
+  </pageHistoryReference>
+</suiteResults>

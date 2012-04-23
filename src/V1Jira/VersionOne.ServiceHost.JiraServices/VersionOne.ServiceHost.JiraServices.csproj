@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--(c) Copyright 2011, VersionOne, Inc. All rights reserved. (c)-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CFCE842-CC70-4902-AB69-2A87EFE354BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VersionOne.ServiceHost.JiraServices</RootNamespace>
+    <AssemblyName>VersionOne.ServiceHost.JiraServices</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Ninject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VersionOne.SDK.APIClient, Version=8.0.588.0, Culture=neutral, PublicKeyToken=e0f410c10d2e7630, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\VersionOne.SDK.APIClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionOne.ServiceHost\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="Exceptions\JiraException.cs" />
+    <Compile Include="Exceptions\JiraValidationException.cs" />
+    <Compile Include="Exceptions\JiraPermissionException.cs" />
+    <Compile Include="IJiraIssueProcessor.cs" />
+    <Compile Include="IJiraProxy.cs" />
+    <Compile Include="IJiraServiceFactory.cs" />
+    <Compile Include="Issue.cs" />
+    <Compile Include="Exceptions\JiraConfigurationException.cs" />
+    <Compile Include="JiraFilter.cs" />
+    <Compile Include="JiraHostedService.cs" />
+    <Compile Include="JiraIssueReaderUpdater.cs" />
+    <Compile Include="JiraServiceConfiguration.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartupValidation\BaseValidator.cs" />
+    <Compile Include="StartupValidation\JiraConnectionValidator.cs" />
+    <Compile Include="StartupValidation\JiraCustomFieldsValidator.cs" />
+    <Compile Include="StartupValidation\JiraFilterValidation.cs" />
+    <Compile Include="StartupValidation\JiraPrioritiesValidator.cs" />
+    <Compile Include="StartupValidation\JiraProjectsValidator.cs" />
+    <Compile Include="StartupValidation\MappingValidator.cs" />
+    <Compile Include="StartupValidation\StartupChecker.cs" />
+    <Compile Include="SynchronizationProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VersionOne.ServerConnector\VersionOne.ServerConnector.csproj">
+      <Project>{19A13CA5-7461-4453-8A5E-9C5A7A55C4D5}</Project>
+      <Name>VersionOne.ServerConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.Core\VersionOne.ServiceHost.Core.csproj">
+      <Project>{F432BAC8-27ED-4C2C-8E06-EF806A5B0D79}</Project>
+      <Name>VersionOne.ServiceHost.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.WorkitemServices\VersionOne.ServiceHost.WorkitemServices.csproj">
+      <Project>{76B6D3F1-16F8-43A9-A2B7-DDADAFE70D0D}</Project>
+      <Name>VersionOne.ServiceHost.WorkitemServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)$(SolutionName)\$(OutDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

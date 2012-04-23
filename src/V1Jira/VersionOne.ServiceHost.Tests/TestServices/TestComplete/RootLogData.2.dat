@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 1">
+			<Node name="children">
+				<Prp name="child 0" type="S" value="{F30B75A3-27C1-4D99-A3BC-1303CA11C3DB}"/>
+			</Node>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{74D0AECC-37DB-4F6C-AC1E-26EA65F436C7}"/>
+			<Prp name="test" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="moniker" type="S" value="{7B1AAA33-F7F5-4E86-9537-F442983F11FC}"/>
+			<Prp name="status" type="I" value="0"/>
+			<Prp name="name" type="S" value="ProjectTestItem1"/>
+			<Prp name="ownermoniker" type="S" value="{FD1B6DCB-1CF2-4359-8E53-7C300C39A843}"/>
+			<Prp name="filename" type="S" value=".\{7B1AAA33-F7F5-4E86-9537-F442983F11FC}"/>
+		</Node>
+		<Node name="item 0">
+			<Node name="children">
+				<Prp name="child 1" type="S" value="{1309C963-DCC0-4225-8D92-5FFFD228168C}"/>
+				<Prp name="child 0" type="S" value="{7B1AAA33-F7F5-4E86-9537-F442983F11FC}"/>
+			</Node>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{74D0AECC-37DB-4F6C-AC1E-26EA65F436C7}"/>
+			<Prp name="test" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="moniker" type="S" value="{FD1B6DCB-1CF2-4359-8E53-7C300C39A843}"/>
+			<Prp name="status" type="I" value="2"/>
+			<Prp name="name" type="S" value="Project1"/>
+			<Prp name="ownermoniker" type="S" value=""/>
+			<Prp name="filename" type="S" value="D:\Documents and Settings\Solomin\My Documents\TestComplete 6 Projects\ProjectSuite1\Project1\Log\2009-04-13_16_28_35_118\{FD1B6DCB-1CF2-4359-8E53-7C300C39A843}"/>
+		</Node>
+		<Node name="item 4">
+			<Node name="children"/>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{C0A16E40-A745-4685-B1CC-65EC03A4C819}"/>
+			<Prp name="test" type="S" value="{48800307-3FDD-4C0C-84B6-C2EF445DB2C2}Main"/>
+			<Prp name="moniker" type="S" value="{AF4B4BA3-1D5B-41F6-A4A5-F99D47A883B4}"/>
+			<Prp name="status" type="I" value="2"/>
+			<Prp name="name" type="S" value="Test Log [Unit2\Main]"/>
+			<Prp name="ownermoniker" type="S" value="{1309C963-DCC0-4225-8D92-5FFFD228168C}"/>
+			<Prp name="filename" type="S" value="D:\Documents and Settings\Solomin\My Documents\TestComplete 6 Projects\ProjectSuite1\Project1\Log\2009-04-13_16_28_35_118\{AF4B4BA3-1D5B-41F6-A4A5-F99D47A883B4}"/>
+		</Node>
+		<Node name="item 3">
+			<Node name="children">
+				<Prp name="child 0" type="S" value="{AF4B4BA3-1D5B-41F6-A4A5-F99D47A883B4}"/>
+			</Node>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{74D0AECC-37DB-4F6C-AC1E-26EA65F436C7}"/>
+			<Prp name="test" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="moniker" type="S" value="{1309C963-DCC0-4225-8D92-5FFFD228168C}"/>
+			<Prp name="status" type="I" value="2"/>
+			<Prp name="name" type="S" value="ProjectTestItem2"/>
+			<Prp name="ownermoniker" type="S" value="{FD1B6DCB-1CF2-4359-8E53-7C300C39A843}"/>
+			<Prp name="filename" type="S" value=".\{1309C963-DCC0-4225-8D92-5FFFD228168C}"/>
+		</Node>
+		<Node name="item 2">
+			<Node name="children"/>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{C0A16E40-A745-4685-B1CC-65EC03A4C819}"/>
+			<Prp name="test" type="S" value="{B7900E44-AE5B-421E-B38F-3052D035A5E1}Main"/>
+			<Prp name="moniker" type="S" value="{F30B75A3-27C1-4D99-A3BC-1303CA11C3DB}"/>
+			<Prp name="status" type="I" value="0"/>
+			<Prp name="name" type="S" value="Test Log [Unit1\Main]"/>
+			<Prp name="ownermoniker" type="S" value="{7B1AAA33-F7F5-4E86-9537-F442983F11FC}"/>
+			<Prp name="filename" type="S" value="D:\Documents and Settings\Solomin\My Documents\TestComplete 6 Projects\ProjectSuite1\Project1\Log\2009-04-13_16_28_35_118\{F30B75A3-27C1-4D99-A3BC-1303CA11C3DB}"/>
+		</Node>
+	</Node>
+</Nodes>

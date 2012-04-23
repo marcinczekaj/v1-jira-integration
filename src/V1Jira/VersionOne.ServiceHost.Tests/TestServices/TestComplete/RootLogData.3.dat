@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+
+<Nodes version="1">
+	<Node name="root">
+		<Node name="item 1">
+			<Node name="children"/>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{C0A16E40-A745-4685-B1CC-65EC03A4C819}"/>
+			<Prp name="test" type="S" value="{48800307-3FDD-4C0C-84B6-C2EF445DB2C2}Main"/>
+			<Prp name="moniker" type="S" value="{D1F1FBC1-A85D-40D4-8627-D0961012C464}"/>
+			<Prp name="status" type="I" value="2"/>
+			<Prp name="name" type="S" value="Test Log [Unit2\Main]"/>
+			<Prp name="ownermoniker" type="S" value="{29FF9793-F65F-4CD6-9A4C-B486AAD4D9AA}"/>
+			<Prp name="filename" type="S" value="D:\Documents and Settings\Solomin\My Documents\TestComplete 6 Projects\ProjectSuite1\Project1\Log\2009-04-13_16_28_20_728\{D1F1FBC1-A85D-40D4-8627-D0961012C464}"/>
+		</Node>
+		<Node name="item 0">
+			<Node name="children">
+				<Prp name="child 0" type="S" value="{D1F1FBC1-A85D-40D4-8627-D0961012C464}"/>
+			</Node>
+			<Prp name="projectkey" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="persistentdatakey" type="S" value="{74D0AECC-37DB-4F6C-AC1E-26EA65F436C7}"/>
+			<Prp name="test" type="S" value="{DAA1D739-A356-4501-AC61-033DC1C261BF}"/>
+			<Prp name="moniker" type="S" value="{29FF9793-F65F-4CD6-9A4C-B486AAD4D9AA}"/>
+			<Prp name="status" type="I" value="2"/>
+			<Prp name="name" type="S" value="ProjectTestItem2"/>
+			<Prp name="ownermoniker" type="S" value=""/>
+			<Prp name="filename" type="S" value=".\{29FF9793-F65F-4CD6-9A4C-B486AAD4D9AA}"/>
+		</Node>
+	</Node>
+</Nodes>

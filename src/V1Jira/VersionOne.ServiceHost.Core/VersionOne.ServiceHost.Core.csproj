@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--(c) Copyright 2011, VersionOne, Inc. All rights reserved. (c)-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F432BAC8-27ED-4C2C-8E06-EF806A5B0D79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VersionOne.ServiceHost.Core</RootNamespace>
+    <AssemblyName>VersionOne.ServiceHost.Core</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Ninject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VersionOne.SDK.APIClient, Version=8.0.588.0, Culture=neutral, PublicKeyToken=e0f410c10d2e7630, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\VersionOne.SDK.APIClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionOne.ServiceHost\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\VersionOne.ServiceHost\Properties\AssemblyInfoProduct.cs">
+      <Link>Properties\AssemblyInfoProduct.cs</Link>
+    </Compile>
+    <Compile Include="CommonModeFactory.cs" />
+    <Compile Include="ContainerBasedFactory.cs" />
+    <Compile Include="ModeBase.cs" />
+    <Compile Include="CommonMode.cs" />
+    <Compile Include="ComponentRepository.cs" />
+    <Compile Include="Configuration\MappingInfo.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LogService.cs" />
+    <Compile Include="Profile\XMLNormalizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Eventing\EventManager.cs" />
+    <Compile Include="Eventing\IEventManager.cs" />
+    <Compile Include="Logging\LogMessage.cs" />
+    <Compile Include="Profile\Interfaces.cs" />
+    <Compile Include="Profile\XmlProfileStore.cs" />
+    <Compile Include="Profile\VirtualNode.cs" />
+    <Compile Include="ServiceHostState.cs" />
+    <Compile Include="ServicesConfigurationHandler.cs" />
+    <Compile Include="Services\FolderBatchProcessorService.cs" />
+    <Compile Include="Services\FolderProcessorService.cs" />
+    <Compile Include="Services\IComponentProvider.cs" />
+    <Compile Include="Services\IHostedService.cs" />
+    <Compile Include="Services\TimePublisherService.cs" />
+    <Compile Include="Services\V1WriterServiceBase.cs" />
+    <Compile Include="StartupValidation\IResolver.cs" />
+    <Compile Include="StartupValidation\ISimpleResolver.cs" />
+    <Compile Include="StartupValidation\IValidationResult.cs" />
+    <Compile Include="StartupValidation\IValidationStep.cs" />
+    <Compile Include="StartupValidation\ISimpleValidator.cs" />
+    <Compile Include="StartupValidation\IValidator.cs" />
+    <Compile Include="StartupValidation\NonStrictValidationSimpleStep.cs" />
+    <Compile Include="StartupValidation\StartupCheckerBase.cs" />
+    <Compile Include="StartupValidation\ValidationException.cs" />
+    <Compile Include="StartupValidation\ValidationResult.cs" />
+    <Compile Include="StartupValidation\ValidationResults.cs" />
+    <Compile Include="StartupValidation\ValidationSimpleStep.cs" />
+    <Compile Include="StartupValidation\ValidationStep.cs" />
+    <Compile Include="Utility\ConfigurationReader.cs" />
+    <Compile Include="Utility\FileSys.cs" />
+    <Compile Include="Utility\FolderMonitor.cs" />
+    <Compile Include="Utility\IIS.cs" />
+    <Compile Include="Utility\Reg.cs" />
+    <Compile Include="Utility\System.HashCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

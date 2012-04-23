@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0011DE87-FAB4-4F76-BD7E-6DCC9DB4C35C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VersionOne.ServiceHost.Tests</RootNamespace>
+    <AssemblyName>VersionOne.ServiceHost.Tests</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\Ninject\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\..\dependencies\NUnit-2.6.0.12051-framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VersionOne.SDK.APIClient, Version=8.0.588.0, Culture=neutral, PublicKeyToken=e0f410c10d2e7630, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\VersionOne.SDK.APIClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionOne.ServiceHost\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\VersionOne.ServiceHost\Properties\AssemblyInfoProduct.cs">
+      <Link>Properties\AssemblyInfoProduct.cs</Link>
+    </Compile>
+    <Compile Include="Core\ComponentRepositoryTester.cs" />
+    <Compile Include="ServerConnector\AssetDisposer.cs" />
+    <Compile Include="ServerConnector\BaseIntegrationTester.cs" />
+    <Compile Include="ServerConnector\Filters\FilterIntegrationTester.cs" />
+    <Compile Include="ServerConnector\Filters\GroupFilterIntegrationTester.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestAssetType.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestAttributeDefinition.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestOid.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestFeatureGroup.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestMember.cs" />
+    <Compile Include="ServerConnector\TestVersionOneProcessor.cs" />
+    <Compile Include="ServerConnector\VersionOneProcessorTester.cs" />
+    <Compile Include="Utility\TestValueId.cs" />
+    <Compile Include="WorkitemServices\BaseWorkitemTester.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\JiraCustomFieldsValidatorTester.cs" />
+    <Compile Include="WorkitemServices\WorkitemWriterHostedServiceTester.cs" />
+    <Compile Include="WorkitemServices\WorkitemWriterTester.cs" />
+    <Compile Include="WorkitemServices\ClosedExternalWorkitemQuerierTester.cs" />
+    <Compile Include="WorkitemServices\Jira\JiraProxyTester.cs" />
+    <Compile Include="WorkitemServices\Jira\BaseJiraTester.cs" />
+    <Compile Include="WorkitemServices\Jira\JiraReaderServiceTester.cs" />
+    <Compile Include="EventSystemTester.cs" />
+    <Compile Include="Profile\VirtualNodeTester.cs" />
+    <Compile Include="Profile\XmlNormalizerTester.cs" />
+    <Compile Include="Profile\XmlProfileStoreTester.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerConnector\Filters\FilterTester.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestStory.cs" />
+    <Compile Include="ServerConnector\TestEntity\TestWorkitem.cs" />
+    <Compile Include="Utility\AssertXml.cs" />
+    <Compile Include="Utility\ResponseConnector.cs" />
+    <Compile Include="Utility\EmptyProfile.cs" />
+    <Compile Include="Utility\StubCentral.cs" />
+    <Compile Include="Utility\ServicesWrapper.cs" />
+    <Compile Include="Utility\ResourceLoader.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\JiraPrioritiesValidatorTester.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\JiraConnectionValidatorTester.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\JiraFilterValidationTester.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\JiraProjectsValidatorTester.cs" />
+    <Compile Include="WorkitemServices\Jira\StartupValidation\MappingValidatorTester.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VersionOne.ServerConnector\VersionOne.ServerConnector.csproj">
+      <Project>{19A13CA5-7461-4453-8A5E-9C5A7A55C4D5}</Project>
+      <Name>VersionOne.ServerConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.Core\VersionOne.ServiceHost.Core.csproj">
+      <Project>{F432BAC8-27ED-4C2C-8E06-EF806A5B0D79}</Project>
+      <Name>VersionOne.ServiceHost.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.WorkitemServices\VersionOne.ServiceHost.WorkitemServices.csproj">
+      <Project>{76B6D3F1-16F8-43A9-A2B7-DDADAFE70D0D}</Project>
+      <Name>VersionOne.ServiceHost.WorkitemServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost.JiraServices\VersionOne.ServiceHost.JiraServices.csproj">
+      <Project>{7CFCE842-CC70-4902-AB69-2A87EFE354BE}</Project>
+      <Name>VersionOne.ServiceHost.JiraServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VersionOne.ServiceHost\VersionOne.ServiceHost.csproj">
+      <Project>{AD53106A-5F5E-4BEA-B344-015397942E89}</Project>
+      <Name>VersionOne.ServiceHost</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Profile\VirtualNodeTester.xml" />
+    <EmbeddedResource Include="Profile\XmlProfileStoreTester.xml" />
+    <Content Include="TestData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)$(SolutionName)\$(OutDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

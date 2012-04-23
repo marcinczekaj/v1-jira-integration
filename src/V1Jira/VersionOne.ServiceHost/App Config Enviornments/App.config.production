@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="Installer" type="VersionOne.ServiceHost.InstallerConfigurationHandler,VersionOne.ServiceHost" />
+    <section name="Services" type="VersionOne.ServiceHost.ServicesConfigurationHandler,VersionOne.ServiceHost.Core" />
+  </configSections>
+  <Installer>
+    <ShortName>V1Jira</ShortName>
+    <LongName>VersionOne Jira Integration</LongName>
+  </Installer>
+  <Services>
+    <LogService class="VersionOne.ServiceHost.Core.Logging.LogService, VersionOne.ServiceHost.Core">
+
+      <Console enabled="1">
+        <LogLevel>Info</LogLevel>
+      </Console>
+
+      <File enabled="1">
+        <LogLevel>Info</LogLevel>
+
+        <Filename>.\ServiceHost.log</Filename>
+
+        <MaximumFileSize>50MB</MaximumFileSize>
+      </File>
+    </LogService>
+
+    <ProfileFlushTimer class="VersionOne.ServiceHost.Core.Services.TimePublisherService,VersionOne.ServiceHost.Core">
+      <Interval>15000</Interval>
+      <PublishClass>VersionOne.ServiceHost.CommonMode+FlushProfile,VersionOne.ServiceHost.Core</PublishClass>
+    </ProfileFlushTimer>
+
+    <JiraService disabled="0" class="VersionOne.ServiceHost.JiraServices.JiraHostedService, VersionOne.ServiceHost.JiraServices" >
+
+      <JIRAUrl>https://jira.sabre.com/rpc/soap/jirasoapservice-v2</JIRAUrl>
+      <JIRAUserName>v1integration</JIRAUserName>
+      <JIRAPassword>v1password</JIRAPassword>
+
+      <CreateDefectFilter disabled="0" id="10306"/>
+      <CreateStoryFilter disabled="1" id="10001"/>
+      <UpdateWorkitemFilter disabled="1" id="10004"/>
+
+
+
+
+      <CreateFieldId>customfield_10171</CreateFieldId>
+      <CreateFieldValue>Ready</CreateFieldValue>
+      <CloseFieldId>customfield_10171</CloseFieldId>
+      <CloseFieldValue>Closed</CloseFieldValue>
+      <BuildNumberFieldId>customfield_10201</BuildNumberFieldId>
+      <SeverityFieldId>customfield_10010</SeverityFieldId>
+
+      <FailureFieldId>customfield_10171</FailureFieldId>
+      <FailureFieldValue>Failure</FailureFieldValue>
+
+
+      <ProgressWorkflow/>
+      <ProgressWorkflowClosed/>
+      <AssigneeStateChanged>-1</AssigneeStateChanged>
+
+      <JIRAIssueUrlTemplate>https://jira.sabre.com/browse/#key#</JIRAIssueUrlTemplate>
+      <JIRAIssueUrlTitle>Jira</JIRAIssueUrlTitle>
+
+      <SourceFieldValue>JIRA</SourceFieldValue>
+
+      <JIRAServiceFactory>VersionOne.Jira.SoapProxy.JiraSoapServiceFactory, VersionOne.Jira.SoapProxy</JIRAServiceFactory>
+
+
+	<ProjectMappings>
+		<Mapping>
+		  <JIRAProject id="ACS"></JIRAProject>
+		  <VersionOneProject id="Scope:1655006"/>
+		</Mapping>
+	</ProjectMappings>
+			
+      <PriorityMappings>
+        <Mapping>
+          <JIRAPriority id="1">Blocker</JIRAPriority>
+          <VersionOnePriority id="WorkitemPriority:140">High</VersionOnePriority>
+        </Mapping>
+        <Mapping>
+          <JIRAPriority id="2">Critical</JIRAPriority>
+          <VersionOnePriority id="WorkitemPriority:140">High</VersionOnePriority>
+        </Mapping>
+        <Mapping>
+          <JIRAPriority id="3">Major</JIRAPriority>
+          <VersionOnePriority id="WorkitemPriority:139">Medium</VersionOnePriority>
+        </Mapping>
+        <Mapping>
+          <JIRAPriority id="4">Minor</JIRAPriority>
+          <VersionOnePriority id="WorkitemPriority:138">Low</VersionOnePriority>
+        </Mapping>
+        <Mapping>
+          <JIRAPriority id="5">Trivial</JIRAPriority>
+          <VersionOnePriority id="WorkitemPriority:138">Low</VersionOnePriority>
+        </Mapping>
+      </PriorityMappings>
+
+      <SeverityMappings>
+        <Mapping>
+          <JiraSeverity id="1">1</JiraSeverity>
+          <VersionOneSeverity id="Custom_Severity_Level:7952">Level 1</VersionOneSeverity>
+        </Mapping>
+        <Mapping>
+          <JiraSeverity id="2">2</JiraSeverity>
+          <VersionOneSeverity id="Custom_Severity_Level:7953">Level 2</VersionOneSeverity>
+        </Mapping>
+        <Mapping>
+          <JiraSeverity id="3">3</JiraSeverity>
+          <VersionOneSeverity id="Custom_Severity_Level:7954">Level 3</VersionOneSeverity>
+        </Mapping>
+        <Mapping>
+          <JiraSeverity id="4">4</JiraSeverity>
+          <VersionOneSeverity id="Custom_Severity_Level:7955">Level 4</VersionOneSeverity>
+        </Mapping>
+      </SeverityMappings>
+
+
+    </JiraService>
+    <!-- Jira Poll Timer -->
+    <JiraServiceTimer disabled="0" class="VersionOne.ServiceHost.Core.Services.TimePublisherService, VersionOne.ServiceHost.Core">
+      <Interval>300000</Interval>
+      <PublishClass>VersionOne.ServiceHost.JiraServices.JiraHostedService+IntervalSync, VersionOne.ServiceHost.JiraServices</PublishClass>
+    </JiraServiceTimer>
+    <WorkitemWriterService disabled="0" class="VersionOne.ServiceHost.WorkitemServices.WorkitemWriterHostedService, VersionOne.ServiceHost.WorkitemServices">
+      <!-- VersionOne field used to hold the Jira Issue identifier.  This can be any text field, including custom fields. -->
+      <ExternalIdFieldName>Reference</ExternalIdFieldName>
+      <Settings>
+        <ApplicationUrl>http://versionone.dev.sabre.com/VersionOne/</ApplicationUrl>
+        <Username>sg0913829</Username>
+        <Password>trinity1</Password>
+        <APIVersion>7.2.0.0</APIVersion>
+        <IntegratedAuth>true</IntegratedAuth>
+      </Settings>
+    </WorkitemWriterService>
+
+  </Services>
+
+</configuration>

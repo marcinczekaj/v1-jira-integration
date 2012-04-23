@@ -1,0 +1,107 @@
+﻿<Report ver="2.0" tmZone="Eastern Standard Time">
+    <General productName="QuickTest Professional" productVer="9.2" os="Windows 2003"
+        host="MERCURYTEST">
+        <DocLocation><![CDATA[C:\Documents and Settings\Administrator\Desktop\Test1]]></DocLocation>
+    </General>
+    <Doc rID="T1" productName="QuickTest Professional">
+        <DName><![CDATA[Passed2]]></DName>
+        <Res><![CDATA[Res1]]></Res>
+        <DT rID="T2">
+            <NodeArgs eType="Table" icon="2" nRep="5" filter="False">
+                <Disp><![CDATA[Run-Time Data Table]]></Disp>
+                <BtmPane vType="Table">
+                    <Path><![CDATA[Default.xls]]></Path>
+                </BtmPane>
+            </NodeArgs>
+        </DT>
+        <DIter rID="T3" iterID="1">
+            <Action rID="T4">
+                <AName><![CDATA[Action2]]></AName>
+                <Step rID="T5">
+                    <Obj plainTxt="False"><![CDATA[VersionOne]]></Obj>
+                    <Details plainTxt="False"><![CDATA[Browser]]></Details>
+                    <Time><![CDATA[10/26/2007 - 9:51:54]]></Time>
+                    <Step rID="T6">
+                        <Obj plainTxt="False"><![CDATA[VersionOne]]></Obj>
+                        <Details plainTxt="False"><![CDATA[Page]]></Details>
+                        <Time><![CDATA[10/26/2007 - 9:51:55]]></Time>
+                        <Step rID="T7">
+                            <Obj plainTxt="False"><![CDATA[_username.Set]]></Obj>
+                            <Details plainTxt="False"><![CDATA["admin"]]></Details>
+                            <Time><![CDATA[10/26/2007 - 9:51:55]]></Time>
+                            <NodeArgs eType="Replay" icon="7" nRep="13">
+                                <Disp><![CDATA[_username.Set]]></Disp>
+                            </NodeArgs>
+                        </Step>
+                        <Step rID="T8">
+                            <Obj plainTxt="False"><![CDATA[_password.SetSecure]]></Obj>
+                            <Details plainTxt="False"><![CDATA["4721f0a62a2473373d2e758684e600e2"]]></Details>
+                            <Time><![CDATA[10/26/2007 - 9:51:55]]></Time>
+                            <NodeArgs eType="Replay" icon="7" nRep="16">
+                                <Disp><![CDATA[_password.SetSecure]]></Disp>
+                            </NodeArgs>
+                        </Step>
+                        <Step rID="T9">
+                            <Obj plainTxt="False"><![CDATA[Log In.Click]]></Obj>
+                            <Details plainTxt="False"><![CDATA[]]></Details>
+                            <Time><![CDATA[10/26/2007 - 9:51:55]]></Time>
+                            <NodeArgs eType="Replay" icon="8" nRep="19">
+                                <Disp><![CDATA[Log In.Click]]></Disp>
+                            </NodeArgs>
+                        </Step>
+                        <NodeArgs eType="Context" icon="6" nRep="12">
+                            <Disp><![CDATA[VersionOne]]></Disp>
+                        </NodeArgs>
+                    </Step>
+                    <Step rID="T10">
+                        <Obj plainTxt="False"><![CDATA[Planning Overview]]></Obj>
+                        <Details plainTxt="False"><![CDATA[Page]]></Details>
+                        <Time><![CDATA[10/26/2007 - 9:51:56]]></Time>
+                        <Step rID="T11">
+                            <Obj plainTxt="False"><![CDATA[Planning.Click]]></Obj>
+                            <Details plainTxt="False"><![CDATA[]]></Details>
+                            <Time><![CDATA[10/26/2007 - 9:51:56]]></Time>
+                            <NodeArgs eType="Replay" icon="9" nRep="23">
+                                <Disp><![CDATA[Planning.Click]]></Disp>
+                            </NodeArgs>
+                        </Step>
+                        <NodeArgs eType="Context" icon="6" nRep="22">
+                            <Disp><![CDATA[Planning Overview]]></Disp>
+                        </NodeArgs>
+                    </Step>
+                    <Step rID="T12">
+                        <Obj plainTxt="False"><![CDATA[Planning Overview_2]]></Obj>
+                        <Details plainTxt="False"><![CDATA[Page]]></Details>
+                        <Time><![CDATA[10/26/2007 - 9:51:56]]></Time>
+                        <Step rID="T13">
+                            <Obj plainTxt="False"><![CDATA[My Home.Click]]></Obj>
+                            <Details plainTxt="False"><![CDATA[]]></Details>
+                            <Time><![CDATA[10/26/2007 - 9:51:56]]></Time>
+                            <NodeArgs eType="Replay" icon="9" nRep="27">
+                                <Disp><![CDATA[My Home.Click]]></Disp>
+                            </NodeArgs>
+                        </Step>
+                        <NodeArgs eType="Context" icon="6" nRep="26">
+                            <Disp><![CDATA[Planning Overview_2]]></Disp>
+                        </NodeArgs>
+                    </Step>
+                    <NodeArgs eType="Context" icon="5" nRep="11">
+                        <Disp><![CDATA[VersionOne]]></Disp>
+                    </NodeArgs>
+                </Step>
+                <Summary sTime="10/26/2007 - 9:51:54" eTime="10/26/2007 - 9:51:57" passed="0" failed="0" warnings="0"/>
+                <NodeArgs eType="StartAction" icon="4" nRep="8">
+                    <Disp><![CDATA[Action2 Summary]]></Disp>
+                </NodeArgs>
+            </Action>
+            <NodeArgs eType="StartIteration" icon="3" nRep="7">
+                <Disp><![CDATA[Test1 Iteration 1 (Row 1)]]></Disp>
+            </NodeArgs>
+        </DIter>
+        <Summary sTime="10/26/2007 - 9:51:46" eTime="10/26/2007 - 9:51:57" passed="0" failed="0"
+            warnings="0"/>
+        <NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed">
+            <Disp><![CDATA[Test Test1 Summary]]></Disp>
+        </NodeArgs>
+    </Doc>
+</Report>

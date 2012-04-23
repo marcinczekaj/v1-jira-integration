@@ -1,0 +1,458 @@
+<!--(c) Copyright 2011, VersionOne, Inc. All rights reserved. (c)-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>VersionOne JIRA Integration</title>
+	    <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">	    
+    </head>
+
+    <body>
+	    <table class="pagecontent" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+		    <tr>
+<td style="width:10%"/>
+			    <td valign="top" class="pagebody">
+				    <div class="pageheader">
+					    <span class="pagetitle">
+                            VersionOne JIRA Integration
+                                                    </span>
+				    </div>
+				    <div class="pagesubheading">
+					    This page last changed on Oct 03, 2011 by <font color="#0050B2">ian.buchanan@versionone.com</font>.
+                                    </div>
+
+				    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1311792629843 {margin-left: 0px;padding: 0px;}
+div.rbtoc1311792629843 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1311792629843 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='rbtoc1311792629843'>
+<ul>
+    <li><span class='TOCOutline'>1</span> <a href='#VersionOneJIRAIntegration-Description'>Description</a></li>
+    <li><span class='TOCOutline'>2</span> <a href='#VersionOneJIRAIntegration-SystemRequirements'>System Requirements</a></li>
+    <li><span class='TOCOutline'>3</span> <a href='#VersionOneJIRAIntegration-Download'>Download</a></li>
+    <li><span class='TOCOutline'>4</span> <a href='#VersionOneJIRAIntegration-Installation'>Installation</a></li>
+    <li><span class='TOCOutline'>5</span> <a href='#VersionOneJIRAIntegration-Configuration'>Configuration</a></li>
+<ul>
+    <li><span class='TOCOutline'>5.1</span> <a href='#VersionOneJIRAIntegration-ConfigureJIRA'>Configure JIRA </a></li>
+    <li><span class='TOCOutline'>5.2</span> <a href='#VersionOneJIRAIntegration-ConfigureVersionOne'>Configure VersionOne </a></li>
+    <li><span class='TOCOutline'>5.3</span> <a href='#VersionOneJIRAIntegration-ConfiguretheIntegration'>Configure the Integration </a></li>
+</ul>
+</ul></div>
+
+<h2><a name="VersionOneJIRAIntegration-Description"></a>Description</h2>
+
+<p>For organizations using agile software development methods, VersionOne is an agile project planning and management tool that helps companies adopt and scale agile faster, easier, and smarter. Unlike spreadsheets and whiteboards, VersionOne is designed from the ground up to support multi-team, multi-project, multi-location agile development enabling methodologies such as Scrum, XP, Kanban, AgileUP, and DSDM.</p>
+
+<p>JIRA is an Atlassian product for issue tracking, commonly used for both bug and issue tracking. As a bug tracking system, JIRA helps quality assurance and programmers keep track of reported software bugs in their work. JIRA also allow users to enter bug reports directly (depending on configuration) although it is often used only internally in a company or organization doing software development. As an issue tracking system, JIRA manages the broader notion of issues needed by an organization. In this context, JIRA may be used in an organization's customer support call center to create, update, and resolve reported customer issues, or even issues reported by that organization's other employees.</p>
+
+<p>For agile development teams using JIRA and VersionOne, who need to integrate their issue management with agile project management, the VersionOne JIRA Integration (V1JIRA) is a bridge that transfers issues in JIRA into defects or stories in VersionOne. V1JIRA creates defects or stories in VersionOne based on issues in JIRA. Using this integration your organization can manage and triage issues reported by customers and promote them to VersionOne for prioritization, estimation, planning, and implementation once you determine development work is necessary. When the work is completed in VersionOne, V1JIRA updates JIRA to reflect this change.</p>
+
+<p>Once the integration is installed and configured, JIRA users can specify which issues require engineering attention and they will automatically appear as stories or defects in VersionOne. Additionally, when the story or defect is closed in VersionOne, the integration updates the JIRA issue to reflect this change. JIRA issues that require engineering attention are identified using filters.</p>
+
+<p>The following sequence diagram illustrates how V1JIRA interacts with JIRA and VersionOne.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 1202x1202" href='attachments/JIRA/13795334.png'><img src="attachments/thumbnails/JIRA/13795334" title="Imported from LucidChart" style="border: 0px solid black"/></a></span></p>
+
+<h2><a name="VersionOneJIRAIntegration-SystemRequirements"></a>System Requirements</h2>
+
+<ul>
+	<li>Operating System &#8212; Windows Server (2003, 2008), Windows Vista, 7</li>
+	<li>Framework &#8212; Microsoft .Net 2.0 SP1 or later</li>
+	<li>VersionOne &#8212; Release 7.3 and above, including Team Edition</li>
+	<li>JIRA &#8212; Release 3.12.3 - 4.4</li>
+</ul>
+
+
+<h2><a name="VersionOneJIRAIntegration-Download"></a>Download</h2>
+
+<p>The latest version of V1JIRA is available from <a href="http://community.versionone.com/Downloads/default.aspx">the VersionOne Community site </a></p>
+
+<h2><a name="VersionOneJIRAIntegration-Installation"></a>Installation</h2>
+
+<p>These installation instructions assume that JIRA is already installed, configured, and working properly.</p>
+<ol>
+	<li><b>Determine Install Location</b><br/>
+V1JIRA can be installed on any server with network access to both VersionOne and JIRA. Exact placement should be determined by your internal software management requirements. The integration server must meet the System Requirements stated above.
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>Extract Files</b><br/>
+Download V1JIRA using the link above and extract it into a folder of your choice.
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>Configure</b><br/>
+Configuration for the JIRA Integration is a 3 step process.
+	<ol>
+		<li><a href="#VersionOneJIRAIntegration-ConfigureJIRA">Configure JIRA</a></li>
+		<li><a href="#VersionOneJIRAIntegration-ConfigureV1">Configure VersionOne</a></li>
+		<li><a href="#VersionOneJIRAIntegration-ConfigureServiceHost">Configure ServiceHost</a><br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	</ol>
+	</li>
+	<li><b>Start the Integration</b><br/>
+Open up the command prompt, navigate to your installation folder, and run the following command:
+<blockquote><p><tt>VersionOne.ServiceHost.exe</tt></p></blockquote>
+<p>If you have configured your system properly, you should see several [Info] messages followed by a [Startup] message.
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></p></li>
+	<li><b>Test the integration</b><br/>
+To ensure the integration is working, perform the following steps:
+	<ol>
+		<li>Create an Issue in JIRA</li>
+		<li>Set the appropriate state in order for the issue to move to VersionOne</li>
+		<li>Verify that the issue appears in VersionOne as a defect</li>
+		<li>Close the defect in VersionOne</li>
+		<li>Verify that the JIRA Issue has been updated as expected</li>
+		<li>Shut down the service host by pressing "Q" in the console window.
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	</ol>
+	</li>
+	<li><b>Install as a Windows Service</b><br/>
+Run the following command from the console window:
+<blockquote><p><tt>VersionOne.ServiceHost.exe --install</tt></p></blockquote>
+<p>This command installs the service so it will will run under the account NT AUTHORITY\Local Service. Local Service must be given access privileges to the directory where the V1JIRA executable was installed so it can store its state and write to log files. Follow the steps below to change the security on the installation directory:</p>
+	<ol>
+		<li>Right click the installation folder from Windows Explorer.</li>
+		<li>Select "properties".</li>
+		<li>Select the "Security" tab.</li>
+		<li>Click the "Add" button.</li>
+		<li>Enter "Local Service" and click "OK".</li>
+		<li>Click the "Allow" checkbox for the "Full Control" row .</li>
+		<li>Click "OK" to save the changes.</li>
+	</ol>
+	</li>
+</ol>
+
+
+<h2><a name="VersionOneJIRAIntegration-Configuration"></a>Configuration</h2>
+
+
+<h3><a name="VersionOneJIRAIntegration-ConfigureJIRA"></a>Configure JIRA<a name="VersionOneJIRAIntegration-ConfigureJIRA"></a></h3>
+
+<p>This section describes how to modify your JIRA instance for use with VersionOne.  Before you begin you need decide if you want to Assign or Tag the Issues you want visible in VersionOne.</p>
+
+<ol>
+	<li><b>Enable JIRA RPC plug-in.</b><br class="atl-forced-newline" />
+Make sure the JIRA RPC plug-in is enabled. Prior to JIRA 4.3 this may need to be installed and enabled. For versions of JIRA later than 4.3, the RPC plug-in is bundled with JIRA and enabled by default.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 1228x417" href='attachments/JIRA/7209161.jpg'><img src="attachments/thumbnails/JIRA/7209161" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>Select or Create a JIRA User.</b><br class="atl-forced-newline" />
+The integration requires a valid JIRA User Id and a Password in order to connect. This user must have sufficient rights to accept work and modify issues (i.e. must be assigned to the Developer Role on the project). This user must also have rights to the actions being performed by the integration (for example, the user must have rights to Close Issues). The default value in configuration is username "remote" and password "remote" but these can be changed to suit your needs.<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>Create Filters for Defect and Story</b>
+<div class='panelMacro'><table class='infoMacro'><colgroup><col width='24'><col></colgroup><tr><td valign='top'><img src="images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>These filters must be available through the credentials used by the integration; hence, it is recommended that you create these filters using the same credentials to avoid the complexity of shared filters.</td></tr></table></div>
+<p>The results of a JIRA filter are used to determine which JIRA issues will be transferred to VersionOne. By using a JIRA filter, you can make the integration fit with your existing JIRA workflow and fields. The details of writing such a filter are beyond the scope of this document. However, the following are some simple examples.<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></p>
+	<ul>
+		<li>Type and Status Filter<br class="atl-forced-newline" />
+The simplest filter is to move all JIRA issues of a certain type and state to VersionOne.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 313x1008" href='attachments/JIRA/13795344.PNG'><img src="attachments/thumbnails/JIRA/13795344" style="border: 0px solid black"/></a></span>
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+		<li>User or Label Filter<br class="atl-forced-newline" />
+If only a subset of JIRA issues of a type and status should be moved, then you may want to create a filter that transfers all JIRA issues that are associated with the remote user, or you may want to create a filter that transfers all JIRA issues that are labeled with "versionone".<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 313x1008" href='attachments/JIRA/13795342.PNG'><img src="attachments/thumbnails/JIRA/13795342" style="border: 0px solid black"/></a></span><span class="image-wrap" style=""><a class="confluence-thumbnail-link 313x1008" href='attachments/JIRA/13795343.PNG'><img src="attachments/thumbnails/JIRA/13795343" style="border: 0px solid black"/></a></span>
+<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+		<li>Custom Field or Combination<br class="atl-forced-newline" />
+If the JIRA fields above would conflict with existing workflow, you may want to create a custom field and have it used as part of the filter. </li>
+	</ul>
+	</li>
+</ol>
+
+
+<ol>
+	<li><b>Do you need a custom field to hold a URL to the VersionOne defect?</b><br class="atl-forced-newline" />
+By default the integration puts the VersionOne defect information in the "Comments" section of the Issue. This information includes a URL to the VersionOne defect. You may optionally add another field to hold this data necessary. To do this create the custom field and note the 'fieldId' value. This value is available to the JIRA Administrator. From the "View Custom Fields" page, select the "Screens" link in the "Operations" column for the desired field. In the URL, note the 'fieldId' value.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 1409x787" href='attachments/JIRA/7209163.jpg'><img src="attachments/thumbnails/JIRA/7209163" style="border: 0px solid black"/></a></span></li>
+</ol>
+
+
+<h3><a name="VersionOneJIRAIntegration-ConfigureVersionOne"></a>Configure VersionOne<a name="VersionOneJIRAIntegration-ConfigureV1"></a></h3>
+<div class='panelMacro'><table class='infoMacro'><colgroup><col width='24'><col></colgroup><tr><td valign='top'><img src="images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>Skip this step if you are configuring a VersionOne Team Edition instance.</td></tr></table></div>
+<ol>
+	<li><b>Add "JIRA" to the list of valid Source</b><br class="atl-forced-newline" />
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 1245x825" href='attachments/JIRA/11173964.jpg'><img src="attachments/thumbnails/JIRA/11173964" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>Determine where to store the JIRA ID</b><br class="atl-forced-newline" />
+The integration needs a text field in VersionOne to store the JIRA identifier. By default this is the <em>Reference</em> field. If you are already using this field, you'll need to create a custom text field and note the name</li>
+</ol>
+
+
+<h3><a name="VersionOneJIRAIntegration-ConfiguretheIntegration"></a>Configure the Integration<a name="VersionOneJIRAIntegration-ConfigureServiceHost"></a></h3>
+
+<p>To configure the JIRA integration you need to run the ServiceHost configuration tool</p>
+<blockquote><p><tt>ServiceHostConfigTool.exe</tt></p></blockquote>
+<p>The following section describes how to configure your JIRA integration using the use the configuration tool</p>
+<ol>
+	<li><b>On the General tab specify your VersionOne connection details</b><br class="atl-forced-newline" />
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 753x742" href='attachments/JIRA/13795354.JPG'><img src="attachments/thumbnails/JIRA/13795354" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" />
+The following table describes the fields on this tab
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Server URL </td>
+<td class='confluenceTd'> This is the URL to your VersionOne server </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Username </td>
+<td class='confluenceTd'> VersionOne user that will create defects </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Password </td>
+<td class='confluenceTd'> Password for the specified user </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Use Windows Integrated Authentication </td>
+<td class='confluenceTd'> Check this box if you VersionOne server is configured to use Windows Integrated Authentication </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" />
+If there's a proxy between this machine and the VersionOne instance, you'll also need to configure the following settings:</p>
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Use Proxy For Connection </td>
+<td class='confluenceTd'> Determines if the integration tries to connect through a Proxy </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Proxy URL </td>
+<td class='confluenceTd'> This is the URL to your Proxy Server </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Proxy Username </td>
+<td class='confluenceTd'> The username that will get you past this proxy </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Proxy Password </td>
+<td class='confluenceTd'> The password for the Proxy Username </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Proxy Domain </td>
+<td class='confluenceTd'> Name of Proxy Domain </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+	<li><b>Once the VersionOne parameters are specified, press Verify button to continue.</b><br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	<li><b>In the Workitems section, specify the VersionOne field that will hold the JIRA ID</b><br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 750x741" href='attachments/JIRA/13795355.JPG'><img src="attachments/thumbnails/JIRA/13795355" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" />
+The following table describes the fields on this tab
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Reference Field Name </td>
+<td class='confluenceTd'> Defect field used to hold JIRA ID. By default this is the Reference field. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Disabled </td>
+<td class='confluenceTd'> Check this box to disable polling VersionOne for defect updates. </td>
+<td class='confluenceTd'>&nbsp;</td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+	<li><b>On the JIRA tab specify your JIRA connection details and the Issue transfer behavior.</b><br class="atl-forced-newline" />
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 757x776" href='attachments/JIRA/13795356.JPG'><img src="attachments/thumbnails/JIRA/13795356" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" />
+	<ol>
+		<li>Configure the JIRA connection<br/>
+Connection Parameters
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Disabled </td>
+<td class='confluenceTd'> Check this box if you want to disable polling JIRA for new Issues </td>
+</tr>
+<tr>
+<td class='confluenceTd'> JIRA URL </td>
+<td class='confluenceTd'> Fully qualified URL to your JIRA instance <br class="atl-forced-newline" />  
+<div class='panelMacro'><table class='infoMacro'><colgroup><col width='24'><col></colgroup><tr><td valign='top'><img src="images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>Don't forget /rpc/soap/jirasoapservice-v2</td></tr></table></div>
+<p> </p></td>
+</tr>
+<tr>
+<td class='confluenceTd'> Username </td>
+<td class='confluenceTd'> Valid JIRA user. This user must be able to see and update Issues in the appropriate projects </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Password </td>
+<td class='confluenceTd'> Password for specified user. </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+		<li>Click Verify to ensure the connection parameters are correct.<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+		<li>Configure VersionOne Workitem attributes<br class="atl-forced-newline" />
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Source </td>
+<td class='confluenceTd'> Select the VersionOne source value to use for JIRA. 
+<div class='panelMacro'><table class='infoMacro'><colgroup><col width='24'><col></colgroup><tr><td valign='top'><img src="images/icons/emoticons/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>VersionOne Team Edition contains a Source value of "External System"</td></tr></table></div>
+<p> </p></td>
+</tr>
+<tr>
+<td class='confluenceTd'> URL Template </td>
+<td class='confluenceTd'> Template for URL to access specific Issue in JIRA. #key# is replaced with the JIRA Issue ID. This field is used to create links from VersionOne to JIRA </td>
+</tr>
+<tr>
+<td class='confluenceTd'> URL Title </td>
+<td class='confluenceTd'> This field is the Link title in VersionOne. </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+		<li>Configure Poll Interval<br class="atl-forced-newline" />
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Poll Interval </td>
+<td class='confluenceTd'> Determines how frequently the integration polls JIRA looking for issues. </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+		<li>Configure Find Jira Issues<br class="atl-forced-newline" />
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Create Defect Filter ID </td>
+<td class='confluenceTd'> JIRA identifier for the filter used to determine which issues are pushed to VersionOne as defects. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Create Story Filter ID </td>
+<td class='confluenceTd'> JIRA identifier for the filter used to determine which issues are pushed to VersionOne as stories. </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+		<li>Configure Update Jira Issue<br class="atl-forced-newline" />
+<div class='table-wrap'>
+<table class='confluenceTable'><tbody>
+<tr>
+<th class='confluenceTh'> Field </th>
+<th class='confluenceTh'> Description </th>
+</tr>
+<tr>
+<td class='confluenceTd'> Link to VersionOne Field ID </td>
+<td class='confluenceTd'> Custom field in JIRA used to hold VersionOne URL. If blank, the URL will be created in the comments. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Create Field ID </td>
+<td class='confluenceTd'> Name of the JIRA Custom Field to update after a defect is <em>created</em> in VersionOne. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Create Field Value </td>
+<td class='confluenceTd'> Value to set in "Create Field ID" after a defect is <em>created</em> in VersionOne. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Close Field ID </td>
+<td class='confluenceTd'> Name of the JIRA custom field to update after a the VersionOne defect is <em>closed</em>. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Close Field Value </td>
+<td class='confluenceTd'> Value to set in "Closed Field ID" after a the VersionOne defect is <em>closed</em>. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Assignee State Changed </td>
+<td class='confluenceTd'> The name of the JIRA user to assign the issue once it's closed in VersionOne. A value of -1 will cause JIRA to set the assignee based on workflow rules. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Progress Workflow Created </td>
+<td class='confluenceTd'> The JIRA Workflow Transition ID to set once it's created in VersionOne. </td>
+</tr>
+<tr>
+<td class='confluenceTd'> Progress Workflow Closed </td>
+<td class='confluenceTd'> The JIRA Workflow Transition ID to set once it's closed in VersionOne. </td>
+</tr>
+</tbody></table>
+</div>
+
+<p><br class="atl-forced-newline" /></p></li>
+	</ol>
+	</li>
+	<li><b>Map your Projects</b><br class="atl-forced-newline" />
+Project Mapping allows you to specify where defects are created in VersionOne. The algorithm for selecting a project is as follows:  First, the integration looks for the JIRA Project Name in the map. If it exists, the defect is created in the corresponding VersionOne Project. If the JIRA Project Name is not found, the integration attempts to find a VersionOne Project with the same name. If found, the integration creates the defect in the VersionOne project with a matching name. If it cannot find a VersionOne project with a name that matches the JIRA Project, the integration will create the defect in the root level node of the VersionOne Project tree or in the first Project in the list if there are multiple top level nodes.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 756x775" href='attachments/JIRA/13795357.JPG'><img src="attachments/thumbnails/JIRA/13795357" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" />
+To add a Project mapping you need to do the following:
+	<ol>
+		<li>Click on the <b>Project and Priority Mapping</b> tab</li>
+		<li>In the Project Mapping grid, select a VersionOne Project value from the dropdown</li>
+		<li>Supply the corresponding JIRA Project name.<br/>
+To remove a mapping:</li>
+		<li>Select the desired row.</li>
+		<li>Click the Delete current row button<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	</ol>
+	</li>
+	<li><b>Map your Priority Values</b><br/>
+Priority mapping allows you to configure how the VersionOne defect priority value is set based on the JIRA Priority value. The algorithm for mapping is simple, if the JIRA Priority value is in the mapping, the VersionOne defect value is set to the mapped value. If the JIRA Priority value is not found, the VersionOne defect value is not set.<br/>
+<span class="image-wrap" style=""><a class="confluence-thumbnail-link 756x775" href='attachments/JIRA/13795357.JPG'><img src="attachments/thumbnails/JIRA/13795357" style="border: 0px solid black"/></a></span><br class="atl-forced-newline" />
+<br class="atl-forced-newline" />
+To add a Priority mapping you need to do the following:
+	<ol>
+		<li>Click on the <b>Project and Priority Mapping</b> tab</li>
+		<li>In the Priority Mappings grid, select a VersionOne Priority value from the dropdown</li>
+		<li>Supply the corresponding JIRA Project value name.<br/>
+To remove a mapping:</li>
+		<li>Select the desired row.</li>
+		<li>Click the Delete current row button<br class="atl-forced-newline" />
+<br class="atl-forced-newline" /></li>
+	</ol>
+	</li>
+	<li><b>Save your changes and exit the program</b></li>
+</ol>
+
+
+                    			    </td>
+<td style="width:10%"/>
+		    </tr>
+	    </table>
+ 	    <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+		    <tr>
+			    <td align="left"><font color="grey">Document generated on Oct 03, 2011 09:18</font></td>
+		    </tr>
+	    </table> 
+    </body>
+</html>

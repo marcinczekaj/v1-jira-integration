@@ -1,0 +1,12 @@
+﻿<root>
+  <profileroot>
+    <firstvalue value="Value 1">
+      <child value='A child value' />
+    </firstvalue>
+    <!-- comment -->
+    <secondvalue value="Value 2" />
+  </profileroot>
+  <bogus>
+    <test value="Test" />
+  </bogus>
+</root>
